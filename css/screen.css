@@ -53,7 +53,7 @@ footer > div { position: relative; max-width: 1160px; min-height: 30px; margin: 
 header > div { z-index: 10; padding: 20px 10px; }
 footer > div { padding: 20px 10px; overflow: hidden; }
 
-#main { background: #d1d1d1; }
+#main { background: #fff; }
 #wrapper { overflow: hidden; }
 
 #splash { background: #e81e4a /*rgba(140,0,0,0.3)*/; }

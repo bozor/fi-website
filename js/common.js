@@ -73,6 +73,28 @@ var Globals = {
 	lastWindowWidth: $(window).width()
 };
 
+var Ajax = {
+	countryAutocomplete: function(){
+		$.ajax({
+			type: "GET",
+			url: "countries.xml",
+			dataType: "xml",
+			success: function(xml){
+				Ui.contactForm.autocomplete(xml);
+			}
+		});
+	},
+	contactFormOptions: {
+		target: 'div#return',
+		url: 'mailer.php',
+		script: true,
+		success: function(){
+			$('#contact_form').slideUp(250,	function(){$('div#return').slideDown()});
+			//pageTracker._trackPageview('/contactFormSubmitted');
+		}
+	}
+}
+
 var Events = {
 	menu: function(){
 		$('#nav > li > div').hide();
@@ -88,6 +110,81 @@ var Events = {
 		}
 		
 		FastClick.attach(document.body);
+	},
+	contactForm: {
+		init: function(){
+			$('#contact_form select').change(function() {
+				val = $(this).val();
+				if(val != 'z') {
+					$('li.option div:not(div#autocomplete-container)').hide();
+					$('li.option').find(':input').each(function() {
+						switch(this.type) {
+							case 'text':
+							case 'textarea':
+								$(this).val('');
+								break;
+						}
+					});
+					$('li.message').show();
+					switch(val) {
+						case 'a':
+							$('li.option div.a').show();
+							break;
+						case 'b':
+							$('li.option div.b').show();
+							break;
+						case 'c':
+							$('li.option div.c').show();
+							break;
+					}
+				}
+			});
+			
+			$('#autocomplete').on('mouseenter', 'span', function(){
+				$(this).css('background-color','#f2f2f2');
+			});
+			
+			$('#autocomplete').on('mouseleave', 'span', function(){
+				$(this).css('background-color','transparent');
+			});
+				
+			$('#autocomplete').on('click', 'span', function(){
+				$('form-country').val($(this).text());
+				$('#autocomplete').slideUp(100);
+			});
+		},
+		validate: function(val){
+			$('#contact_form').validate({
+				rules: {
+					control: {
+						required: true,
+						digits: true,
+						range: [val, val]
+					}
+				},
+				messages: {
+					control: {
+						required: ' ',
+						digits: ' ',
+						range: ' '
+					}
+				},
+				highlight: function(element){
+					if($(element).hasClass('math')){
+						$('.temp').hide();
+					}
+				},
+				unhighlight: function(element){
+					if($(element).hasClass('math')){
+						$('.temp').hide();
+					}
+				},
+				success: 'valid',
+				submitHandler: function(form) {
+					$(form).ajaxSubmit(Ajax.contactFormOptions);
+				}
+			});
+		}
 	}
 }
 
@@ -116,6 +213,46 @@ var Ui = {
 			count: 1,
 			loading_text: 'loading twitter feed...',
 		});
+	},
+	contactForm: { 
+		init: function(val){
+			$('li.option div:not(div#autocomplete-container)').hide();
+			$('li.message').hide();
+			
+			Events.contactForm.init();
+			Events.contactForm.validate(val);
+		},
+		autocomplete: function(xml){
+			var cArray = [];
+			
+			$(xml).find('country').each(function(){
+				cArray.push($(this).text());
+			});
+			
+			$("#form-country").keyup(function(){
+				var tempInput = $(this).val();
+				$('#autocomplete').hide();
+				$('#autocomplete').html('');				
+				if(tempInput != ''){
+					$('#autocomplete').show();
+					
+					for(var i = 0; i < cArray.length; i++){
+						var tempCountry = cArray[i];
+						
+						if(tempCountry.toLowerCase().indexOf(tempInput.toLowerCase()) == 0){
+							$('#autocomplete').append('<span>'+cArray[i]+'</span>');
+						}
+					}
+					
+					var span = $('#autocomplete span');
+					
+					//alert($("#popup span").index(span));
+					if($('#autocomplete span').index(span) == -1 ){
+						$('#autocomplete').append('<p>No results found for <strong>'+tempInput+'</strong></p>');
+					}
+				}
+			});
+		}
 	}
 }
 
@@ -223,39 +360,18 @@ var resizeHandler = function () {
 google.maps.event.addDomListener(window, 'load', Map.init);
 
 $(function (){
-
 	if ('ontouchstart' in window) {
 		Events.menu();
 		Map.defaultZoom = 1;
 	} else {
 		Map.defaultZoom = 2;
-		/*$('#nav > li > a').mouseenter(function(e){
-			$('#nav div').animate({height: '0'}, 250);
-			
-			var height = parseInt($(this).next('div').css("height"));
-			$(this).next('div').css("height", "0px"); // or any other initial state you want          
-			$(this).next('div').stop(true, true).animate({ height: height + "px"}, 1000);
-
-			//$(this).next('div').animate({height: 'auto'}, 250);
-		});
-		
-		$('#nav div, #nav').mouseleave(function(e){
-			$('#nav div').animate({height: '0'}, 250);
-		});*/
 	}
 	
 	Ui.twitter();
-	
+
 	$('#back-to-top').click(function(e){
 		$.scrollTo(0, 250);
 	});
-	
-	// Touch detection
-	if ('ontouchstart' in window) {
-		/*$(document).on('touchstart', touchStartHandler);
-		$(document).on('touchmove', touchMoveHandler);
-		$(document).on('touchend', touchEndHandler);*/
-	}
 	
     // Window resize handler
     $(window).on('resize', resizeHandler);

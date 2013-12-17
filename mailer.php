@@ -62,21 +62,22 @@ $headers = "From: $mail_from" . "\n" . "Reply-To: $mail_from" . "\n" . "X-Mailer
 
 if ( isset($_SESSION['answer']) && !empty($_SESSION['answer'])  && ( $_POST['control'] == $_SESSION['answer'] ) ){
 
-	//echo "<strong>".$mail_subject."</strong>".$message;
+	echo "<strong>".$mail_subject."</strong>".$message;
 
-	if ( mail($mail_to, $mail_subject, $message, $headers) ) {
+	/*if ( mail($mail_to, $mail_subject, $message, $headers) ) {
 		echo "<div class=\"success\"><h2>Thank you</h2><p>One of our representatives will be in touch shortly.</p></div>";
 	} else {
 		echo "<div class=\"error\"><h2>Error</h2><p>We are sorry but something went wrong. Please try again later.</p></div>";
-	}
+	}*/
+	
 } else {
 
-	$mail_to = "bozor@btinternet.com";
+	echo "<strong>error</strong>".$message;
+	/*$mail_to = "bozor@btinternet.com";
 	$mail_subject = "Contact from website - Bot/Script";
 	$message = "Bot/scripting attempt - ( " . $_POST["control"] ." / ". $_SESSION['answer'] ." )!\n-----------------------------------\n\n ip: ".$ip."\n user agent: ".$ua."\n\n".$message;
-	mail($mail_to, $mail_subject, $message, $headers);
+	mail($mail_to, $mail_subject, $message, $headers);*/
 
 }
 
 ?>
-

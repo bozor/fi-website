@@ -14,7 +14,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
-<title>new title 55555</title>
+<title>new title</title>
 
 <link rel="stylesheet" type="text/css" href="css/reset-min.css" />
 <link rel="stylesheet" type="text/css" href="css/screen.css" />
@@ -26,6 +26,8 @@
 <script type="text/javascript" src="js/scrollTo.min.js"></script>
 <script type="text/javascript" src="js/isotope.min.js"></script>
 <script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript" src="js/jquery.form.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 
 <!--[if lt IE 9]>
@@ -107,6 +109,63 @@
 			<div class="col-3">
 				<article id="content">
 					<h1>Content</h1>
+					<form id="contact_form" action="mailer.php" method="post">
+						<ul>
+							<li>
+								<label>Your Name</label>
+								<input type="text" id="form-name" name="form-name" class="text required" />
+								<input type="hidden" id="control" />
+							</li>
+							<li>
+								<label>Your Email</label>
+								<input type="text" id="form-email" name="form-email" class="text required email" />
+							</li>
+							<li>
+								<label>Your Phone Number</label>
+								<input type="text" id="form-phone" name="form-phone" class="text" />
+							</li>
+							<li>
+								<label>Type of Enquiry</label>
+								<select name="form-enquiry">
+									<option value="z">Please select...</option>
+									<option value="a">Sales</option>
+									<option value="b">Technical</option>
+									<option value="c">Support</option>
+								</select>
+							</li>
+							<li class="option">
+								<div class="a">
+									<label>Your Company</label>
+									<input type="text" id="form-company" name="form-company" class="text" />
+									<label>Your Country</label>
+									<input type="text" id="form-country" name="form-country" class="text" autocomplete="off" />
+									<div id="autocomplete-container">
+										<div id="autocomplete"></div>
+									</div>
+								</div>
+								<div class="c">
+									<label>Serial No.</label>
+									<input type="text" id="form-serial" name="form-serial" class="text" />
+									<label>Product</label>
+									<input type="text" id="form-product" name="form-product" class="text" />
+								</div>
+							</li>
+							<li class="message">
+								<label>Your Message</label>
+								<textarea cols="1" rows="8" id="form-message" name="form-message"></textarea>
+							</li>
+							<li class="control">
+								<span>Please answer this simple maths question to show us you are human and not a machine:</span>
+								<div>
+									<label><?php echo($x); ?> &times; <?php echo($y); ?> =</label>
+									<input type="text" id="control" name="control" class="text small math" />
+									<label class="temp"></label>
+								</div>
+							</li>
+							<li><button type="submit">send</button></li>
+						</ul>
+					</form>
+					<div id="return"></div>
 				</article>
 				<article id="other">
 					additional
@@ -184,5 +243,11 @@
 			
 		</div>
 	</footer>
+	
+	<script type="text/javascript">
+		$(function(){
+			Ui.contactForm.init(<?php echo($ans) ?>);
+		});
+	</script>
 </body>
 </html>
