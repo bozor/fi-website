@@ -247,6 +247,7 @@
 	<script type="text/javascript">
 		$(function(){
 			Ui.contactForm.init(<?php echo($ans) ?>);
+			Ajax.countryAutocomplete();
 		});
 	</script>
 </body>

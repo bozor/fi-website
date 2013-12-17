@@ -149,7 +149,7 @@ var Events = {
 			});
 				
 			$('#autocomplete').on('click', 'span', function(){
-				$('form-country').val($(this).text());
+				$('#form-country').val($(this).text());
 				$('#autocomplete').slideUp(100);
 			});
 		},
