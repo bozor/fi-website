@@ -14,7 +14,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
-<title>new title 1</title>
+<title>new title 3</title>
 
 <link rel="stylesheet" type="text/css" href="css/reset-min.css" />
 <link rel="stylesheet" type="text/css" href="css/screen.css" />
