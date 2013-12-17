@@ -1,6 +1,6 @@
 <?php
 
-// Start
+// Start mailer
 session_start();
 
 $ip=$_SERVER['REMOTE_ADDR'];
