@@ -11,7 +11,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Contact Form - Fianium</title>
+<title>Contact Form - 1</title>
 <link href="http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css" rel="stylesheet" type="text/css" /> 
 <link href="css/screen.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="css/print.css" rel="stylesheet" type="text/css" media="print" />
