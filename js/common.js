@@ -257,6 +257,7 @@ var Ui = {
 }
 
 var Map = {
+	isLoaded: false,
 	view: null,
 	center: new google.maps.LatLng(42.0525, 0.14365),
 	locations: [
@@ -271,6 +272,7 @@ var Map = {
 	defaultZoom: 2,
 	init: function(){
 		var mapOptions = {
+			//draggable: false,
 			zoom: Map.defaultZoom,
 			center: Map.center,
 			mapTypeControl: false,
@@ -287,7 +289,7 @@ var Map = {
 		
         Map.view = new google.maps.Map(document.getElementById("map"), mapOptions);
 		//Map.view.mapTypes.set(Map.layer, new google.maps.StamenMapType(Map.layer));
-		
+
 		Map.showMarkers();
 	},
 	addMarker: function() {
@@ -353,7 +355,10 @@ var resizeHandler = function () {
 		Globals.lastWindowHeight = $(window).height();
         Globals.lastWindowWidth = $(window).width();
 		
-		// do something on resize
+		if(Map.isLoaded){
+			// center the map on resize
+			//Map.view.setCenter(Map.center);
+		}
 	}
 }
 
