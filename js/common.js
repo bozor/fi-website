@@ -112,10 +112,16 @@ var Events = {
 		FastClick.attach(document.body);
 	},
 	setCookie: function(){
-		$('#cookie-set').on('click', 'a', function(e){
+		$('body').on('click', '#cookie-set a', function(e){
 			e.preventDefault();
 			Cookies.set($(this).attr('id'));
 			Cookies.showContent();
+			Ui.closeCookieSet();
+		});
+	},
+	closeCookieOverlay: function() {
+		$('body').on('click', '.close-cookie-overlay', function(e){
+			Ui.closeCookieSet();
 		});
 	},
 	contactForm: {
@@ -261,7 +267,20 @@ var Ui = {
 		}
 	},
 	showCookieSet: function(){
-		console.log('set cookies');
+		var content = '\
+		<a href="#" class="close-cookie-overlay">x</a>\
+		<p id="cookie-set">set your cookie:&nbsp;&nbsp;<a href="#" id="cookie1">cookie 1</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="#" id="cookie2">cookie 2</a></p>'
+		
+		$('body').prepend('<div id="industry-select-container">'+content+'</div><div id="fade"></div>');
+		
+		Events.setCookie();
+		Events.closeCookieOverlay();
+	},
+	closeCookieSet: function(){
+		$('#fade').fadeOut(500);
+		$('#industry-select-container').fadeOut(500, function(){
+			$('#fade, #industry-select-container').remove();
+		});
 	}
 }
 
@@ -374,26 +393,26 @@ var Cookies = {
 		
 		$.cookie('f_site_cookie_content', cookieVal, { expires: 365, path: '/' });
 	},
-	initialSet: function(){
+	/*initialSet: function(){
 		Ui.showCookieSet();
-		//Events.setCookie();
-	},
+	},*/
 	showContent: function(){
 		$('body').removeAttr('class');
 		switch($.cookie('f_site_cookie_content')){
 			// one
 			case '1':
 				$('body').addClass('content1');
-				$('#cookie-value').text('cookie1');
+				//$('#cookie-value').text('cookie1');
 				break;
 			// two
 			case '2':
 				$('body').addClass('content2');
-				$('#cookie-value').text('cookie2');
+				//$('#cookie-value').text('cookie2');
 				break;
 			// initial
 			default:
-				Cookies.initialSet();
+				//Cookies.initialSet();
+				Ui.showCookieSet();
 				$('#cookie-value').text('no cookie');
 				break;
 		}
