@@ -111,6 +111,13 @@ var Events = {
 		
 		FastClick.attach(document.body);
 	},
+	setCookie: function(){
+		$('#cookie-set').on('click', 'a', function(e){
+			e.preventDefault();
+			Cookies.set($(this).attr('id'));
+			Cookies.showContent();
+		});
+	},
 	contactForm: {
 		init: function(){
 			$('#contact_form select').change(function() {
@@ -245,14 +252,16 @@ var Ui = {
 					}
 					
 					var span = $('#autocomplete span');
-					
-					//alert($("#popup span").index(span));
+
 					if($('#autocomplete span').index(span) == -1 ){
 						$('#autocomplete').append('<p>No results found for <strong>'+tempInput+'</strong></p>');
 					}
 				}
 			});
 		}
+	},
+	showCookieSet: function(){
+		console.log('set cookies');
 	}
 }
 
@@ -350,6 +359,47 @@ var Map = {
 	}
 }
 
+var Cookies = {
+	set: function(value){
+		var cookieVal = null;
+		
+		switch(value){
+			case 'cookie1':
+				cookieVal = '1';
+				break;
+			case 'cookie2':
+				cookieVal = '2';
+				break;
+		}
+		
+		$.cookie('f_site_cookie_content', cookieVal, { expires: 365, path: '/' });
+	},
+	initialSet: function(){
+		Ui.showCookieSet();
+		//Events.setCookie();
+	},
+	showContent: function(){
+		$('body').removeAttr('class');
+		switch($.cookie('f_site_cookie_content')){
+			// one
+			case '1':
+				$('body').addClass('content1');
+				$('#cookie-value').text('cookie1');
+				break;
+			// two
+			case '2':
+				$('body').addClass('content2');
+				$('#cookie-value').text('cookie2');
+				break;
+			// initial
+			default:
+				Cookies.initialSet();
+				$('#cookie-value').text('no cookie');
+				break;
+		}
+	}
+}
+
 var resizeHandler = function () {
 	if($(window).height() != Globals.lastWindowHeight || $(window).width() != Globals.lastWindowWidth){
 		Globals.lastWindowHeight = $(window).height();
@@ -362,9 +412,9 @@ var resizeHandler = function () {
 	}
 }
 
-google.maps.event.addDomListener(window, 'load', Map.init);
-
 $(function (){
+	Cookies.showContent();
+	
 	if ('ontouchstart' in window) {
 		Events.menu();
 		Map.defaultZoom = 1;
@@ -372,8 +422,6 @@ $(function (){
 		Map.defaultZoom = 2;
 	}
 	
-	Ui.twitter();
-
 	$('#back-to-top').click(function(e){
 		$.scrollTo(0, 250);
 	});
