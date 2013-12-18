@@ -121,6 +121,7 @@ var Events = {
 	},
 	closeCookieOverlay: function() {
 		$('body').on('click', '.close-cookie-overlay', function(e){
+			e.preventDefault();
 			Ui.closeCookieSet();
 		});
 	},
@@ -198,6 +199,12 @@ var Events = {
 				}
 			});
 		}
+	},
+	openCookieOverlay: function(){
+		$('.show-set-industry').click(function(e){
+			e.preventDefault();
+			Ui.showCookieSet();
+		});
 	}
 }
 
@@ -433,6 +440,7 @@ var resizeHandler = function () {
 
 $(function (){
 	Cookies.showContent();
+	Events.openCookieOverlay();
 	
 	if ('ontouchstart' in window) {
 		Events.menu();

@@ -14,32 +14,29 @@
 <body>
 	<?php include("includes/header.php") ?>
 	
-	<section id="main">
+	<article id="main">
 		<div id="wrapper">
-			<article id="splash">
+			<section id="splash">
 				<div id="map"></div>
-			<!--<div class="flexible-container">
-				<iframe id="map" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-			</div>-->
-			</article>
+			</section>
 			<div class="col-3">
-				<article id="content">
+				<section id="content">
 					<h1>Content</h1>
-				</article>
-				<article id="other">
-					additional
+				</section>
+				<section id="other">
+					<h2>latest tweets</h2>
 					<div class="twitter"></div>
-				</article>
-				<article id="links">
+				</section>
+				<section id="links">
 					<div>
 						<ul>
 							<li><a href="#">A link</a></li>
 						</ul>
 					</div>
-				</article>
+				</section>
 			</div>
 		</div>
-	</section>
+	</article>
 	
 	<?php include("includes/footer.php") ?>
 

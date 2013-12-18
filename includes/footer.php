@@ -5,6 +5,7 @@
 				<p id="copyright">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 				<p id="footer-address">Donec tristique tempus ligula elementum vehicula. In ultricies pretium nisl vel eleifend. Nulla facilisi. Nullam
 				dignissim tincidunt sapien, in adipiscing nisi tincidunt non.</p>
+				<p><a href="#" class="show-set-industry">Change your industry</a></p>
 			</div>
 			<ol>
 				<li><a href="index.htm">Home</a></li>

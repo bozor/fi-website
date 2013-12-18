@@ -25,13 +25,13 @@
 <body>
 <?php include("includes/header.php") ?>
 	
-	<section id="main">
+	<article id="main">
 		<div id="wrapper">
-			<article id="splash">
+			<section id="splash">
 
-			</article>
-			<div class="col-3">
-				<article id="content">
+			</section>
+			<div class="col-2">
+				<section id="content">
 					<h1>Content</h1>
 					<form id="contact_form" action="mailer.php" method="post">
 						<ul>
@@ -90,21 +90,17 @@
 						</ul>
 					</form>
 					<div id="return"></div>
-				</article>
-				<article id="other">
-					additional
-
-				</article>
-				<article id="links">
+				</section>
+				<section id="links">
 					<div>
 						<ul>
 							<li><a href="#">A link</a></li>
 						</ul>
 					</div>
-				</article>
+				</section>
 			</div>
 		</div>
-	</section>
+	</article>
 	<?php include("includes/footer.php") ?>
 
 	<script type="text/javascript">
