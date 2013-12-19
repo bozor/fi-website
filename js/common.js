@@ -306,7 +306,6 @@ var Map = {
 	layer: "toner",
 	defaultZoom: 2,
 	init: function(){
-
 		var mapOptions = {
 			//draggable: false,
 			zoom: Map.defaultZoom,

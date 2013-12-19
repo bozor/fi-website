@@ -1,7 +1,7 @@
 <footer>
 		<div class="content">
 			<div id="footer-text">
-				<a id="back-to-top">Top</a>
+				<p><a id="back-to-top">Top</a></p>
 				<p id="copyright">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 				<p id="footer-address">Donec tristique tempus ligula elementum vehicula. In ultricies pretium nisl vel eleifend. Nulla facilisi. Nullam
 				dignissim tincidunt sapien, in adipiscing nisi tincidunt non.</p>
@@ -61,3 +61,12 @@
 			
 		</div>
 	</footer>
+	
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3.12&sensor=false"></script>
+<script type="text/javascript" src="js/enquire.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/scrollTo.min.js"></script>
+<script type="text/javascript" src="js/isotope.min.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript" src="js/common.js"></script>

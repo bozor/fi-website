@@ -115,7 +115,8 @@ footer > div { padding: 20px 10px; overflow: hidden; }
 /* ---------------- */
 /* Footer */
 
-#back-to-top { display: block; color: blue; }
+#back-to-top { text-decoration: underline; }
+#back-to-top:hover { text-decoration: none; }
 
 #footer-text { float: left; width: 30%; }
 
