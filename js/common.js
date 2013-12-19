@@ -306,6 +306,7 @@ var Map = {
 	layer: "toner",
 	defaultZoom: 2,
 	init: function(){
+
 		var mapOptions = {
 			//draggable: false,
 			zoom: Map.defaultZoom,
@@ -325,6 +326,17 @@ var Map = {
         Map.view = new google.maps.Map(document.getElementById("map"), mapOptions);
 		//Map.view.mapTypes.set(Map.layer, new google.maps.StamenMapType(Map.layer));
 
+		enquire.register('screen and (max-width:480px)', function(){
+			Map.defaultZoom = 0;
+			Map.view.setZoom(Map.defaultZoom);
+
+		});
+
+		enquire.register('screen and (max-width:800px)', function(){
+			Map.defaultZoom = 1;
+			Map.view.setZoom(Map.defaultZoom);
+		});
+		
 		Map.showMarkers();
 	},
 	addMarker: function() {
@@ -445,8 +457,6 @@ $(function (){
 	if ('ontouchstart' in window) {
 		Events.menu();
 		Map.defaultZoom = 1;
-	} else {
-		Map.defaultZoom = 2;
 	}
 	
 	$('#back-to-top').click(function(e){
