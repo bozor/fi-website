@@ -14,13 +14,12 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
-<title>new title test</title>
+<title>contact form</title>
 
 <?php include("includes/common.php") ?>
 
-
-
 </head>
+
 <body>
 <?php include("includes/header.php") ?>
 	
@@ -33,7 +32,7 @@
 				<section id="content">
 					<h1>Content</h1>
 					<form id="contact_form" action="mailer.php" method="post">
-						<ul>
+						<ul class="form">
 							<li>
 								<label>Your Name</label>
 								<input type="text" id="form-name" name="form-name" class="text required" />

@@ -205,6 +205,20 @@ var Events = {
 			e.preventDefault();
 			Ui.showCookieSet();
 		});
+	},
+	enquire: {
+		map: function(){
+			enquire.register('screen and (max-width:480px)', function(){
+				Map.defaultZoom = 0;
+				Map.view.setZoom(Map.defaultZoom);
+
+			});
+
+			enquire.register('screen and (max-width:800px)', function(){
+				Map.defaultZoom = 1;
+				Map.view.setZoom(Map.defaultZoom);
+			});
+		}
 	}
 }
 
@@ -324,17 +338,8 @@ var Map = {
 		
         Map.view = new google.maps.Map(document.getElementById("map"), mapOptions);
 		//Map.view.mapTypes.set(Map.layer, new google.maps.StamenMapType(Map.layer));
-
-		enquire.register('screen and (max-width:480px)', function(){
-			Map.defaultZoom = 0;
-			Map.view.setZoom(Map.defaultZoom);
-
-		});
-
-		enquire.register('screen and (max-width:800px)', function(){
-			Map.defaultZoom = 1;
-			Map.view.setZoom(Map.defaultZoom);
-		});
+		
+		Events.enquire.map();
 		
 		Map.showMarkers();
 	},

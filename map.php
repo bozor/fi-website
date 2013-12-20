@@ -4,13 +4,12 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
-<title>new title test</title>
-
-<script type="text/javascript" src="js/tile.stamen.js"></script>
+<title>map</title>
 
 <?php include("includes/common.php") ?>
 
 </head>
+
 <body>
 <?php include("includes/header.php") ?>
 	
@@ -29,6 +28,9 @@
 				<section id="links">
 					<div>
 						<ul>
+							<li><a href="#">A link</a></li>
+							<li><a href="#">A link</a></li>
+							<li><a href="#">A link</a></li>
 							<li><a href="#">A link</a></li>
 						</ul>
 					</div>

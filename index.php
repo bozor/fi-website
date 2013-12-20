@@ -9,6 +9,7 @@
 <?php include("includes/common.php") ?>
 
 </head>
+
 <body>
 	<?php include("includes/header.php") ?>
 	
