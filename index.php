@@ -8,8 +8,6 @@
 
 <?php include("includes/common.php") ?>
 
-<script type="text/javascript" src="js/jquery.tweet.min.js"></script>
-
 </head>
 <body>
 	<?php include("includes/header.php") ?>
@@ -39,7 +37,7 @@
 	</article>
 	
 	<?php include("includes/footer.php") ?>
-
+	<script type="text/javascript" src="js/jquery.tweet.min.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			Ui.twitter();

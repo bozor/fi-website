@@ -18,8 +18,7 @@
 
 <?php include("includes/common.php") ?>
 
-<script type="text/javascript" src="js/jquery.form.min.js"></script>
-<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+
 
 </head>
 <body>
@@ -102,7 +101,10 @@
 		</div>
 	</article>
 	<?php include("includes/footer.php") ?>
-
+	
+	<script type="text/javascript" src="js/jquery.form.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	
 	<script type="text/javascript">
 		$(function(){
 			Ui.contactForm.init(<?php echo($ans) ?>);

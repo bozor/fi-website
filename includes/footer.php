@@ -62,11 +62,6 @@
 		</div>
 	</footer>
 	
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3.12&sensor=false"></script>
-<script type="text/javascript" src="js/enquire.min.js"></script>
-<script type="text/javascript" src="js/jquery.cookie.js"></script>
-<script type="text/javascript" src="js/scrollTo.min.js"></script>
-<script type="text/javascript" src="js/isotope.min.js"></script>
-<script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
