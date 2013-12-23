@@ -184,6 +184,15 @@ footer ol > li { float: left; width: 16%; }
 	footer ol { float: none; width: 100%; }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+	/* Main Layout */
+	
+	.col-3 #content,
+	.col-2 #content { width: 65%; }
+	#narrow { float: left; width: 35%; }
+	.col-2 #links { width: 35%; }
+}
+
 @media only screen and (max-width: 767px) {
 
 	h1 { font-size: 2em; }

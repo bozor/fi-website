@@ -16,7 +16,7 @@
 	<article id="main">
 		<div id="wrapper">
 			<section id="splash">
-				<div id="map"></div>
+				
 			</section>
 			<div class="col-3">
 				<section id="content">
