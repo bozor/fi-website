@@ -98,7 +98,7 @@ var Ajax = {
 var Events = {
 	menu: function(){
 		$('#nav > li > div').hide();
-	
+
 		if($('#mobile-menu').is(':visible')){
 			$('#nav > li > div').show();
 			
@@ -210,14 +210,17 @@ var Events = {
 		map: function(){
 			enquire.register('screen and (max-width:480px)', function(){
 				Map.defaultZoom = 0;
-				Map.view.setZoom(Map.defaultZoom);
-
 			});
 
-			enquire.register('screen and (max-width:800px)', function(){
+			enquire.register('screen and (max-width:767px)', function(){
 				Map.defaultZoom = 1;
-				Map.view.setZoom(Map.defaultZoom);
 			});
+			
+			enquire.register('screen and (max-width:1024px)', function(){
+				Map.defaultZoom = 2;
+			});
+			
+			Map.view.setZoom(Map.defaultZoom);
 		}
 	}
 }
@@ -239,6 +242,10 @@ var Ui = {
 			}
 			$('#mobile-menu').toggleClass('close');
 		}
+	},
+	setActiveNav: function(elem) {
+		$('#nav a').removeClass('active');
+		elem.addClass('active');
 	},
 	twitter: function(){
 		$('.twitter').tweet({
@@ -459,6 +466,7 @@ $(function (){
 	Events.openCookieOverlay();
 	
 	if ('ontouchstart' in window) {
+		$('html').addClass('touch');
 		Events.menu();
 		Map.defaultZoom = 1;
 	}

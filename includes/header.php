@@ -6,7 +6,7 @@
 				<span id="mobile-menu"></span>
 			</div>
 			<ol id="nav">
-				<li><a href="index.htm">Home</a></li>
+				<li id="nav-home"><a href="index.htm">Home</a></li>
 				<li id="nav-about">
 					<a href="map.htm">Section 1</a>
 					<div>

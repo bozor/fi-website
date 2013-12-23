@@ -1,7 +1,7 @@
 /* ---------------- */
 /* Setup */
 
-html { background: #f2f2f2; font-family: 'Source Sans Pro', sans-serif;-webkit-text-size-adjust: 100%; }
+html { background: #fff; font-family: 'Source Sans Pro', sans-serif;-webkit-text-size-adjust: 100%; }
 
 div, a, span { -webkit-tap-highlight-color: rgba(0,0,0,0); }
 
@@ -53,7 +53,7 @@ footer > div { position: relative; max-width: 1160px; min-height: 30px; margin: 
 header > div { z-index: 10; padding: 20px 10px; }
 footer > div { padding: 20px 10px; overflow: hidden; }
 
-#main { background: #fff; }
+#main { background: #f2f2f2; }
 #wrapper { overflow: hidden; }
 
 #splash { background: #e81e4a /*rgba(140,0,0,0.3)*/; }
@@ -64,9 +64,9 @@ footer > div { padding: 20px 10px; overflow: hidden; }
 /* content page */
 
 #splash { float: none; width: 100%; }
-#content { float: left; width: 70%; }
-#other { float: right; width: 30%; }
-#links { float: right; width: 30%; }
+#content { float: left; }
+#other { float: right; }
+#links { float: right; }
 
 .col-3 #content { width: 48%; }
 .col-3 #other { width: 26%; }
@@ -105,6 +105,7 @@ footer > div { padding: 20px 10px; overflow: hidden; }
 #nav { position: absolute; right: 0; }
 #nav > li { float: left; position: relative; margin-right: 10px; }
 #nav > li > a { display: inline-block; padding: 5px; color: #333; text-decoration: none; background: #ddd; -webkit-transition: .2s all ease; -moz-transition: .2s all ease; -o-transition: .2s all ease; -ms-transition: .2s all ease; transition: .2s all ease; }
+#nav > li.active > a, 
 #nav > li:hover > a { background: #333; color: #fff; -webkit-transition: .2s all ease; -moz-transition: .2s all ease; -o-transition: .2s all ease; -ms-transition: .2s all ease; transition: .2s all ease; }
 #nav > li > div { position: absolute; right: 0; display: table-row; overflow: hidden; width: 180px; height: 0; }
 #nav > li:hover > div,
@@ -113,6 +114,24 @@ footer > div { padding: 20px 10px; overflow: hidden; }
 #nav ul { padding-bottom: 10px; }
 #nav ul a { display: inline-block; padding: 10px 10px 0; color: #fff; font-size: 0.8em; }
 #nav ul a:hover { text-decoration: none; }
+
+/* touch version */
+
+.touch  #header-overlay { position: relative; width: 100%; background: #ddd; padding: 10px 0; overflow: hidden; z-index: 20; }
+	
+.touch #nav { position: relative; right: 0; overflow: hidden; max-height: 0; clear: both; background: #ccc; }
+.touch #nav.hidden { max-height: 0; -webkit-transition: .5s all ease; -moz-transition: .5s all ease; -o-transition: .5s all ease; -ms-transition: .5s all ease; transition: .5s all ease; }
+.touch #nav.visible { max-height: 999px; -webkit-transition: 1s all ease; -moz-transition: 1s all ease; -o-transition: 1s all ease; -ms-transition: 1s all ease; transition: .5s all ease; }
+	
+.touch #nav > li > div { display: block; position: relative; height: auto; }
+.touch #nav > li > a { background: transparent; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; }
+.touch #nav > li > a:hover { color: #333; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; }
+.touch #nav > li:hover > a { background: transparent; color: #333; }
+.touch #nav > li:hover > div,
+.touch #nav > li > div:hover { background: transparent; color: auto; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; }
+	
+.touch #mobile-menu { float: right; display: block; width: 30px; height: 30px; background: green; }
+.touch #mobile-menu.close { background: red; }
 
 /* ---------------- */
 /* Footer */
@@ -124,7 +143,7 @@ footer > div { padding: 20px 10px; overflow: hidden; }
 
 footer p { margin-top: 10px; }
 
-footer ol { overflow: hidden; float: right; width: 65%; }
+footer ol { overflow: hidden; float: right; width: 65%; padding-top: 10px; }
 footer ol > li { float: left; width: 16%; }
 
 /* ---------------- */
@@ -138,20 +157,25 @@ footer ol > li { float: left; width: 16%; }
 	
 	/* Header */
 
-	#mobile-menu { display: none; }
-	
 	/* Footer */
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
 
 	/* maps */
 	
 	#map { height: 300px; }
 
 	/* Main Layout */
-
-	#links {}
+	
+	.col-3 #content,
+	.col-2 #content { width: 70%; }
+	#narrow { float: left; width: 30%; }
+	.col-3 #narrow #other,
+	.col-3 #narrow #links,
+	.col-2 #narrow #links { float: none; width: 100%; }
+	
+	.touch #nav > li  { float: left; width: 15%; }
 	
 	/* Footer */
 
@@ -170,32 +194,7 @@ footer ol > li { float: left; width: 16%; }
 	header > div,
 	footer > div { padding: 10px; }
 
-	/* maps */
-	
-	#map { height: 200px; }
-	
-	/* Header */
-	
-	#header-overlay { position: relative; width: 100%; background: #ddd; padding: 10px 0; overflow: hidden; z-index: 20; }
-	
-	#nav { position: relative; right: 0; overflow: hidden; max-height: 0; clear: both; background: #ccc; }
-	#nav.hidden { max-height: 0; -webkit-transition: .5s all ease; -moz-transition: .5s all ease; -o-transition: .5s all ease; -ms-transition: .5s all ease; transition: .5s all ease; }
-	#nav.visible { max-height: 999px; -webkit-transition: 1s all ease; -moz-transition: 1s all ease; -o-transition: 1s all ease; -ms-transition: 1s all ease; transition: .5s all ease; }
-	
-	#nav > li  { float: left; width: 45%; }
-	#nav > li > div { display: block; position: relative; height: auto; }
-	#nav > li > a { background: transparent; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; }
-	#nav > li > a:hover { color: #333; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; }
-	#nav > li:hover > a { background: transparent; color: #333; }
-	#nav > li:hover > div,
-	#nav > li > div:hover { background: transparent; color: auto; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; }
-	
-	#mobile-menu { float: right; display: block; width: 30px; height: 30px; background: green; margin-right: 10px; }
-	#mobile-menu.close { background: red; }
-	
-	#main { position: relative; clear: both; }
-	
-	/* Main Layout */
+	.touch #nav > li  { float: left; width: 45%; }
 	
 	#links,
 	#content,
@@ -207,6 +206,14 @@ footer ol > li { float: left; width: 16%; }
 	.col-3 #content,
 	.col-3 #other { float: none; width: 100%; }
 	
+	/* maps */
+	
+	#map { height: 200px; }
+	
+	/* Header */
+	
+	#main { position: relative; clear: both; }
+	
 	/* Footer */
 	#footer-text { float: none; width: 100%; }
 	footer ol { display: none; }
@@ -216,6 +223,6 @@ footer ol > li { float: left; width: 16%; }
 
 	/* Header */
 	
-	#nav > li  { float: left; width: 30%; }
+	.touch #nav > li  { float: left; width: 30%; }
 }
 

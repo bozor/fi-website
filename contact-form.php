@@ -108,6 +108,7 @@
 		$(function(){
 			Ui.contactForm.init(<?php echo($ans) ?>);
 			Ajax.countryAutocomplete();
+			Ui.setActiveNav($('#nav-products'));
 		});
 	</script>
 </body>

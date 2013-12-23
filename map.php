@@ -44,7 +44,7 @@
 		google.maps.event.addDomListener(window, 'load', Map.init);
 		
 		$(function(){
-
+			Ui.setActiveNav($('#nav-about'));
 		});
 	</script>
 </body>

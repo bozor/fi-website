@@ -22,17 +22,19 @@
 				<section id="content">
 					<h1>Content</h1>
 				</section>
-				<section id="other">
-					<h2>latest tweets</h2>
-					<div class="twitter"></div>
-				</section>
-				<section id="links">
-					<div>
-						<ul>
-							<li><a href="#">A link</a></li>
-						</ul>
-					</div>
-				</section>
+				<div id="narrow">
+					<section id="other">
+						<h2>latest tweets</h2>
+						<div class="twitter"></div>
+					</section>
+					<section id="links">
+						<div>
+							<ul>
+								<li><a href="#">A link</a></li>
+							</ul>
+						</div>
+					</section>
+				</div>
 			</div>
 		</div>
 	</article>
@@ -42,6 +44,8 @@
 	<script type="text/javascript">
 		$(function(){
 			Ui.twitter();
+			
+			Ui.setActiveNav($('#nav-home'));
 		});
 	</script>
 </body>
