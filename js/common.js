@@ -215,9 +215,13 @@ var Events = {
 			enquire.register('screen and (max-width:767px)', function(){
 				Map.defaultZoom = 1;
 			});
-			
+
 			enquire.register('screen and (max-width:1024px)', function(){
 				Map.defaultZoom = 2;
+			});
+			
+			enquire.register('screen and (max-width:800px) and (-webkit-min-device-pixel-ratio: 1.5)', function(){
+				Map.defaultZoom = 1;
 			});
 			
 			Map.view.setZoom(Map.defaultZoom);

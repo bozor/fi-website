@@ -22,19 +22,21 @@
 				<section id="content">
 					<h1>Content</h1>
 				</section>
-				<section id="other">
-					additional
-				</section>
-				<section id="links">
-					<div>
-						<ul>
-							<li><a href="#">A link</a></li>
-							<li><a href="#">A link</a></li>
-							<li><a href="#">A link</a></li>
-							<li><a href="#">A link</a></li>
-						</ul>
-					</div>
-				</section>
+				<div id="narrow">
+					<section id="other">
+						additional
+					</section>
+					<section id="links">
+						<div>
+							<ul>
+								<li><a href="#">A link</a></li>
+								<li><a href="#">A link</a></li>
+								<li><a href="#">A link</a></li>
+								<li><a href="#">A link</a></li>
+							</ul>
+						</div>
+					</section>
+				</div>
 			</div>
 		</div>
 	</article>

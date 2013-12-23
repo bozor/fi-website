@@ -56,7 +56,7 @@ footer > div { padding: 20px 10px; overflow: hidden; }
 #main { background: #f2f2f2; }
 #wrapper { overflow: hidden; }
 
-#splash { background: #e81e4a /*rgba(140,0,0,0.3)*/; }
+#splash { background: rgba(140,0,0,0.3); }
 #links { background: rgba(0,190,0,0.3); }
 #content { background: rgba(0,0,80,0.3); }
 #other { background: rgba(20,50,190,0.3); }
@@ -172,8 +172,8 @@ footer ol > li { float: left; width: 16%; }
 	.col-2 #content { width: 70%; }
 	#narrow { float: left; width: 30%; }
 	.col-3 #narrow #other,
-	.col-3 #narrow #links,
-	.col-2 #narrow #links { float: none; width: 100%; }
+	.col-3 #narrow #links { float: none; width: 100%; }
+	.col-2 #links { width: 30%; }
 	
 	.touch #nav > li  { float: left; width: 15%; }
 	
