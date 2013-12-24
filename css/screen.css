@@ -121,13 +121,13 @@ footer > div { padding: 20px 10px; overflow: hidden; }
 
 .touch #header-overlay { position: relative; width: 100%; height: 44px; padding: 10px 0; overflow: hidden; z-index: 20; }
 	
-.touch #nav { position: relative; right: 0; overflow: hidden; max-height: 0; clear: both; border-radius: 4px; padding: 0 0 1px; }
+.touch #nav { position: relative; right: 0; overflow: hidden; max-height: 0; clear: both; border-radius: 4px; padding: 5px 0; }
 .touch #nav.hidden { max-height: 0; -webkit-transition: .5s all ease; -moz-transition: .5s all ease; -o-transition: .5s all ease; -ms-transition: .5s all ease; transition: .5s all ease; }
 .touch #nav.visible { max-height: 999px; -webkit-transition: 1s all ease; -moz-transition: 1s all ease; -o-transition: 1s all ease; -ms-transition: 1s all ease; transition: .5s all ease; background: #454545; }
 	
 .touch #nav > li { margin-right: 0; }
-.touch #nav > li > div { display: block; position: relative; height: auto; padding-top: 0; margin-top: -5px; }
-.touch #nav > li > a { background: transparent; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; padding-bottom: 0px; color: #989f98; text-decoration: underline; margin-bottom: 5px; }
+.touch #nav > li > div { display: block; position: relative; height: auto; padding-top: 0; margin-top: -3px; padding-left: 6px; }
+.touch #nav > li > a { background: transparent; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; padding: 6px 16px 0px; color: #989f98; text-decoration: underline; margin-bottom: 5px; }
 .touch #nav > li > a:hover { color: #e8e8e8; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; text-decoration: none; }
 .touch #nav > li:hover > a { background: transparent; color: #989f98; }
 .touch #nav > li:hover > div,
@@ -246,6 +246,6 @@ footer ol div a { font-size: 0.8em; }
 
 	/* Header */
 	
-	.touch #nav > li { float: left; width: 30%; }
+	.touch #nav > li { float: left; width: 33%; }
 }
 

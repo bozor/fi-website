@@ -226,6 +226,21 @@ var Events = {
 			
 			Map.view.setZoom(Map.defaultZoom);
 		}
+	},
+	onOrientationChange: function() {
+		// reload isotope
+		$('#nav').isotope('reLayout');
+	},
+	resizeHandler = function () {
+		if($(window).height() != Globals.lastWindowHeight || $(window).width() != Globals.lastWindowWidth){
+			Globals.lastWindowHeight = $(window).height();
+	        Globals.lastWindowWidth = $(window).width();
+			
+			if(Map.isLoaded){
+				// center the map on resize
+				//Map.view.setCenter(Map.center);
+			}
+		}
 	}
 }
 
@@ -453,18 +468,6 @@ var Cookies = {
 	}
 }
 
-var resizeHandler = function () {
-	if($(window).height() != Globals.lastWindowHeight || $(window).width() != Globals.lastWindowWidth){
-		Globals.lastWindowHeight = $(window).height();
-        Globals.lastWindowWidth = $(window).width();
-		
-		if(Map.isLoaded){
-			// center the map on resize
-			//Map.view.setCenter(Map.center);
-		}
-	}
-}
-
 $(function (){
 	Cookies.showContent();
 	Events.openCookieOverlay();
@@ -473,6 +476,8 @@ $(function (){
 		$('html').addClass('touch');
 		Events.menu();
 		Map.defaultZoom = 1;
+
+		window.addEventListener('orientationchange', Events.onOrientationChange);
 	}
 	
 	$('#back-to-top').click(function(e){
@@ -480,5 +485,5 @@ $(function (){
 	});
 	
     // Window resize handler
-    $(window).on('resize', resizeHandler);
+    $(window).on('resize', Events.resizeHandler);
 });
