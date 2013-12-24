@@ -8,50 +8,54 @@
 			<ol id="nav">
 				<li id="nav-home"><a href="index.htm">Home</a></li>
 				<li id="nav-about">
-					<a href="map.htm">Section 1</a>
+					<a href="map.htm">Company</a>
 					<div>
 						<ul>
-							<li><a href="#">Item 1</a></li>
-							<li><a href="#">Item 2</a></li>
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Management</a></li>
+							<li><a href="#">Careers</a></li>
 						</ul>
 					</div>
 				</li>
 				<li id="nav-products">
-					<a href="contact-form.htm">Section 2</a>
+					<a href="contact-form.htm">Products</a>
 					<div>
 						<ul>
-							<li><a href="#">Item 1</a></li>
-							<li><a href="#">Item 2</a></li>
-							<li><a href="#">Item 3</a></li>
-							<li><a href="#">Item 4</a></li>
+							<li><a href="#">Supercontinuum sources</a></li>
+							<li><a href="#">FemtoPower fiber lasers</a></li>
+							<li><a href="#">HE high-energy fiber lasers</a></li>
+							<li><a href="#">ALP (advanced laser platform)</a></li>
+							<li><a href="#">Ex-demo equipement</a></li>
 						</ul>
 					</div>
 				</li>
 				<li id="nav-application">
-					<a href="#">Section 3</a>
+					<a href="#">Applications</a>
 					<div>
 						<ul>
-							<li><a href="#">Item 1</a></li>
+							<li><a href="#">Overview</a></li>
+							<li><a href="#">User publications</a></li>
 						</ul>
 					</div>
 				</li>
 				<li id="nav-news">
-					<a href="#">Section 4</a>
+					<a href="#">News</a>
 					<div>
 						<ul>
-							<li><a href="#">Item 1</a></li>
-							<li><a href="#">Item 2</a></li>
-							<li><a href="#">Item 3</a></li>
-							<li><a href="#">Item 4</a></li>
+							<li><a href="#">Company news</a></li>
+							<li><a href="#">Product news</a></li>
+							<li><a href="#">Upcoming events</a></li>
+							<li><a href="#">Press area</a></li>
 						</ul>
 					</div>
 				</li>
 				<li id="nav-contact">
-					<a href="#">Section 5</a>
+					<a href="#">Contact Us</a>
 					<div>
 						<ul>
-							<li><a href="#">Item 1</a></li>
-							<li><a href="#">Item 2</a></li>
+							<li><a href="#">Fianium offices</a></li>
+							<li><a href="#">Sales contacts</a></li>
+							<li><a href="#">Contact form</a></li>
 						</ul>
 					</div>
 				</li>

@@ -1,7 +1,7 @@
 /* ---------------- */
 /* Setup */
 
-html { background: #fff; font-family: 'Source Sans Pro', sans-serif;-webkit-text-size-adjust: 100%; }
+html { background: url(../images/top-red-bar.png) center top no-repeat #fff; font-family: 'Source Sans Pro', sans-serif; -webkit-text-size-adjust: 100%; }
 
 div, a, span { -webkit-tap-highlight-color: rgba(0,0,0,0); }
 
@@ -50,7 +50,7 @@ header > div,
 article > div,
 footer > div { position: relative; max-width: 1160px; min-height: 30px; margin: 0 auto; padding: 0 10px; }
 
-header > div { z-index: 10; padding: 20px 10px; }
+header > div { z-index: 10; height: 63px; padding: 30px 10px 10px; }
 footer > div { padding: 20px 10px; overflow: hidden; }
 
 #main { background: #f2f2f2; }
@@ -100,38 +100,43 @@ footer > div { padding: 20px 10px; overflow: hidden; }
 /* ---------------- */
 /* Header */
 
-#logo { float: left; display: block; width: 120px; height: 30px; color: #fff; background: blue; }
+#logo { float: left; display: block; width: 150px; height: 44px; background: url(../images/imagemap.png) 0 0 no-repeat; text-indent: -9999px; cursor: pointer; -webkit-transition: .2s all ease; -moz-transition: .2s all ease; -o-transition: .2s all ease; -ms-transition: .2s all ease; transition: .2s all ease; }
+#logo:hover { opacity: 0.6; -webkit-transition: .2s all ease; -moz-transition: .2s all ease; -o-transition: .2s all ease; -ms-transition: .2s all ease; transition: .2s all ease; }
 
-#nav { position: absolute; right: 0; }
+#nav { position: absolute; right: 0; padding-top: 5px; }
 #nav > li { float: left; position: relative; margin-right: 10px; }
-#nav > li > a { display: inline-block; padding: 5px; color: #333; text-decoration: none; background: #ddd; -webkit-transition: .2s all ease; -moz-transition: .2s all ease; -o-transition: .2s all ease; -ms-transition: .2s all ease; transition: .2s all ease; }
+#nav > li > a { display: inline-block; padding: 6px 10px; color: #989f98; background: #f7f7f7; font-size: 0.95em; text-decoration: none; -webkit-transition: .2s all ease; -moz-transition: .2s all ease; -o-transition: .2s all ease; -ms-transition: .2s all ease; transition: .2s all ease; border-radius: 4px; }
 #nav > li.active > a, 
-#nav > li:hover > a { background: #333; color: #fff; -webkit-transition: .2s all ease; -moz-transition: .2s all ease; -o-transition: .2s all ease; -ms-transition: .2s all ease; transition: .2s all ease; }
-#nav > li > div { position: absolute; right: 0; display: table-row; overflow: hidden; width: 180px; height: 0; }
+#nav > li:hover > a { background: #454545; color: #e8e8e8; -webkit-transition: .2s all ease; -moz-transition: .2s all ease; -o-transition: .2s all ease; -ms-transition: .2s all ease; transition: .2s all ease; border-radius: 4px 4px 0 0; padding-bottom: 16px; }
+#nav > li.active > a { border-radius: 4px; padding-bottom: 6px; }
+#nav > li > div { position: absolute; right: 0; display: table-row; overflow: hidden; width: 180px; height: 0; border-radius: 4px 0 4px 4px; }
 #nav > li:hover > div,
-#nav > li > div:hover { height: auto; background: #333; -webkit-transition: .2s all ease; -moz-transition: .2s all ease; -o-transition: .2s all ease; -ms-transition: .2s all ease; transition: .2s all ease; }
+#nav > li > div:hover { height: auto; background: #454545; -webkit-transition: .2s all ease; -moz-transition: .2s all ease; -o-transition: .2s all ease; -ms-transition: .2s all ease; transition: .2s all ease; }
 
 #nav ul { padding-bottom: 10px; }
-#nav ul a { display: inline-block; padding: 10px 10px 0; color: #fff; font-size: 0.8em; }
+#nav ul a { display: inline-block; padding: 10px 10px 0; color: #e8e8e8; font-size: 0.8em; }
 #nav ul a:hover { text-decoration: none; }
 
 /* touch version */
 
-.touch  #header-overlay { position: relative; width: 100%; background: #ddd; padding: 10px 0; overflow: hidden; z-index: 20; }
+.touch #header-overlay { position: relative; width: 100%; height: 44px; padding: 10px 0; overflow: hidden; z-index: 20; }
 	
-.touch #nav { position: relative; right: 0; overflow: hidden; max-height: 0; clear: both; background: #ccc; }
+.touch #nav { position: relative; right: 0; overflow: hidden; max-height: 0; clear: both; border-radius: 4px; padding: 0 0 1px; }
 .touch #nav.hidden { max-height: 0; -webkit-transition: .5s all ease; -moz-transition: .5s all ease; -o-transition: .5s all ease; -ms-transition: .5s all ease; transition: .5s all ease; }
-.touch #nav.visible { max-height: 999px; -webkit-transition: 1s all ease; -moz-transition: 1s all ease; -o-transition: 1s all ease; -ms-transition: 1s all ease; transition: .5s all ease; }
+.touch #nav.visible { max-height: 999px; -webkit-transition: 1s all ease; -moz-transition: 1s all ease; -o-transition: 1s all ease; -ms-transition: 1s all ease; transition: .5s all ease; background: #454545; }
 	
-.touch #nav > li > div { display: block; position: relative; height: auto; }
-.touch #nav > li > a { background: transparent; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; }
-.touch #nav > li > a:hover { color: #333; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; }
-.touch #nav > li:hover > a { background: transparent; color: #333; }
+.touch #nav > li { margin-right: 0; }
+.touch #nav > li > div { display: block; position: relative; height: auto; padding-top: 0; margin-top: -5px; }
+.touch #nav > li > a { background: transparent; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; padding-bottom: 0px; color: #989f98; text-decoration: underline; margin-bottom: 5px; }
+.touch #nav > li > a:hover { color: #e8e8e8; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; text-decoration: none; }
+.touch #nav > li:hover > a { background: transparent; color: #989f98; }
 .touch #nav > li:hover > div,
 .touch #nav > li > div:hover { background: transparent; color: auto; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; }
+.touch #nav ul { padding-bottom: 4px; padding-right: 10px; }
+.touch #nav ul a { padding-top: 0px; padding-bottom: 3px; }
 	
-.touch #mobile-menu { float: right; display: block; width: 30px; height: 30px; background: green; }
-.touch #mobile-menu.close { background: red; }
+.touch #mobile-menu { float: right; display: block; width: 31px; height: 26px; background: url(../images/imagemap.png) -480px -50px no-repeat; -webkit-background-size: 960px 600px; margin-top: 8px; opacity: 0.6; }
+.touch #mobile-menu.close { opacity: 1; }
 
 /* ---------------- */
 /* Footer */
@@ -145,9 +150,18 @@ footer p { margin-top: 10px; }
 
 footer ol { overflow: hidden; float: right; width: 65%; padding-top: 10px; }
 footer ol > li { float: left; width: 16%; }
-
+footer ol div a { font-size: 0.8em; }
 /* ---------------- */
 /* Responsive */
+
+/* high res */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.touch #mobile-menu,
+	#logo { -webkit-background-size: 960px 600px; }
+
+	#logo { background-position: -480px 0; }
+}
 
 @media only screen and (min-width: 1176px) {
 
@@ -175,7 +189,7 @@ footer ol > li { float: left; width: 16%; }
 	.col-3 #narrow #links { float: none; width: 100%; }
 	.col-2 #links { width: 30%; }
 	
-	.touch #nav > li  { float: left; width: 15%; }
+	.touch #nav > li { float: left; width: 15%; }
 	
 	/* Footer */
 
@@ -203,7 +217,7 @@ footer ol > li { float: left; width: 16%; }
 	header > div,
 	footer > div { padding: 10px; }
 
-	.touch #nav > li  { float: left; width: 45%; }
+	.touch #nav > li { float: left; width: 50%; }
 	
 	#links,
 	#content,
@@ -232,6 +246,6 @@ footer ol > li { float: left; width: 16%; }
 
 	/* Header */
 	
-	.touch #nav > li  { float: left; width: 30%; }
+	.touch #nav > li { float: left; width: 30%; }
 }
 
