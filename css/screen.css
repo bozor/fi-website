@@ -107,7 +107,10 @@ footer > div { padding: 20px 10px; overflow: hidden; }
 #nav > li { float: left; position: relative; margin-right: 10px; }
 #nav > li > a { display: inline-block; padding: 6px 10px; color: #989f98; background: #f7f7f7; font-size: 0.95em; text-decoration: none; -webkit-transition: .2s all ease; -moz-transition: .2s all ease; -o-transition: .2s all ease; -ms-transition: .2s all ease; transition: .2s all ease; border-radius: 4px; }
 #nav > li.active > a, 
+#nav > li.active:hover > a,
 #nav > li:hover > a { background: #454545; color: #e8e8e8; -webkit-transition: .2s all ease; -moz-transition: .2s all ease; -o-transition: .2s all ease; -ms-transition: .2s all ease; transition: .2s all ease; border-radius: 4px 4px 0 0; padding-bottom: 16px; }
+#nav > li#nav-home.active > a,
+#nav > li#nav-home:hover > a { border-radius: 4px; padding-bottom: 6px; }
 #nav > li.active > a { border-radius: 4px; padding-bottom: 6px; }
 #nav > li > div { position: absolute; right: 0; display: table-row; overflow: hidden; width: 180px; height: 0; border-radius: 4px 0 4px 4px; }
 #nav > li:hover > div,
