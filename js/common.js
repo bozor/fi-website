@@ -231,7 +231,7 @@ var Events = {
 		// reload isotope
 		$('#nav').isotope('reLayout');
 	},
-	resizeHandler = function () {
+	resizeHandler: function () {
 		if($(window).height() != Globals.lastWindowHeight || $(window).width() != Globals.lastWindowWidth){
 			Globals.lastWindowHeight = $(window).height();
 	        Globals.lastWindowWidth = $(window).width();
