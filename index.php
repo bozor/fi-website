@@ -16,7 +16,7 @@
 	<article id="main">
 		<div id="wrapper">
 			<section id="splash">
-				
+				<img src="images/splash/home.png" />
 			</section>
 			<div class="col-3">
 				<section id="content">

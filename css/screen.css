@@ -43,17 +43,17 @@ p { color: #414042; font-size: 0.9em; line-height: 1.5em; }
 /* ---------------- */
 /* Main Layout */
 
-header {  }
-footer {  }
+header { padding: 0 10px; }
+footer { padding: 0 10px; }
 
 header > div,
 article > div,
 footer > div { position: relative; max-width: 1160px; min-height: 30px; margin: 0 auto; padding: 0 10px; }
 
-header > div { z-index: 10; height: 63px; padding: 30px 10px 10px; }
-footer > div { padding: 20px 10px; overflow: hidden; }
+header > div { z-index: 10; height: 56px; padding: 30px 0 10px; border-bottom: 1px solid #e8e8e8; }
+footer > div { padding: 20px 0px; overflow: hidden; border-top: 1px solid #e8e8e8; }
 
-#main { background: #f2f2f2; }
+#main { padding: 20px 0; }
 #wrapper { overflow: hidden; }
 
 #splash { background: rgba(140,0,0,0.3); }
@@ -74,6 +74,8 @@ footer > div { padding: 20px 10px; overflow: hidden; }
 
 .col-2 #content { width: 74%; }
 .col-2 #links { width: 26%; }
+
+#splash img { max-width: 100%; height: auto; display: block; }
 
 /* product page */
 
@@ -103,7 +105,7 @@ footer > div { padding: 20px 10px; overflow: hidden; }
 #logo { float: left; display: block; width: 150px; height: 44px; background: url(../images/imagemap.png) 0 0 no-repeat; text-indent: -9999px; cursor: pointer; -webkit-transition: .2s all ease; -moz-transition: .2s all ease; -o-transition: .2s all ease; -ms-transition: .2s all ease; transition: .2s all ease; }
 #logo:hover { opacity: 0.6; -webkit-transition: .2s all ease; -moz-transition: .2s all ease; -o-transition: .2s all ease; -ms-transition: .2s all ease; transition: .2s all ease; }
 
-#nav { position: absolute; right: 0; padding-top: 5px; }
+#nav { position: absolute; right: -10px; padding-top: 5px; }
 #nav > li { float: left; position: relative; margin-right: 10px; }
 #nav > li > a { display: inline-block; padding: 6px 10px; color: #989f98; background: #f7f7f7; font-size: 0.95em; text-decoration: none; -webkit-transition: .2s all ease; -moz-transition: .2s all ease; -o-transition: .2s all ease; -ms-transition: .2s all ease; transition: .2s all ease; border-radius: 4px; }
 #nav > li.active > a, 
@@ -129,7 +131,7 @@ footer > div { padding: 20px 10px; overflow: hidden; }
 .touch #nav.visible { max-height: 999px; -webkit-transition: 1s all ease; -moz-transition: 1s all ease; -o-transition: 1s all ease; -ms-transition: 1s all ease; transition: .5s all ease; background: #454545; }
 	
 .touch #nav > li { margin-right: 0; }
-.touch #nav > li > div { display: block; position: relative; height: auto; padding-top: 0; margin-top: -3px; padding-left: 6px; }
+.touch #nav > li > div { display: block; position: relative; width: 100%; height: auto; padding-top: 0; margin-top: -3px; padding-left: 6px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 0; }
 .touch #nav > li > a { background: transparent; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; padding: 6px 16px 0px; color: #989f98; text-decoration: underline; margin-bottom: 5px; }
 .touch #nav > li > a:hover { color: #e8e8e8; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; text-decoration: none; }
 .touch #nav > li:hover > a { background: transparent; color: #989f98; }
@@ -138,7 +140,7 @@ footer > div { padding: 20px 10px; overflow: hidden; }
 .touch #nav ul { padding-bottom: 4px; padding-right: 10px; }
 .touch #nav ul a { padding-top: 0px; padding-bottom: 3px; }
 	
-.touch #mobile-menu { float: right; display: block; width: 31px; height: 26px; background: url(../images/imagemap.png) -480px -50px no-repeat; -webkit-background-size: 960px 600px; margin-top: 8px; opacity: 0.6; }
+.touch #mobile-menu { float: right; display: block; width: 31px; height: 26px; background: url(../images/imagemap.png) -468px -43px no-repeat; -webkit-background-size: 960px 600px; margin-top: 2px; opacity: 0.6; padding: 7px 0 7px 12px; }
 .touch #mobile-menu.close { opacity: 1; }
 
 /* ---------------- */
@@ -154,6 +156,7 @@ footer p { margin-top: 10px; }
 footer ol { overflow: hidden; float: right; width: 65%; padding-top: 10px; }
 footer ol > li { float: left; width: 16%; }
 footer ol div a { font-size: 0.8em; }
+
 /* ---------------- */
 /* Responsive */
 
@@ -184,16 +187,20 @@ footer ol div a { font-size: 0.8em; }
 	#map { height: 300px; }
 
 	/* Main Layout */
-	
+		
+	header > div { padding-top: 10px; }
+
 	.col-3 #content,
 	.col-2 #content { width: 70%; }
 	#narrow { float: left; width: 30%; }
 	.col-3 #narrow #other,
 	.col-3 #narrow #links { float: none; width: 100%; }
 	.col-2 #links { width: 30%; }
-	
-	.touch #nav > li { float: left; width: 15%; }
-	
+
+	.touch #nav { position: absolute; right: 0; width: 50%; margin-left: 50%; }
+	.touch #nav > li { float: left; width: 33%; }
+	.touch #nav ul { margin-bottom: 0; padding-bottom: 0; }
+
 	/* Footer */
 
 	#footer-text { float: none; width: 100%; }
@@ -202,12 +209,15 @@ footer ol div a { font-size: 0.8em; }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
 	/* Main Layout */
 	
 	.col-3 #content,
 	.col-2 #content { width: 65%; }
 	#narrow { float: left; width: 35%; }
 	.col-2 #links { width: 35%; }
+
+	.touch #nav > li { float: left; width: 50%; }
 }
 
 @media only screen and (max-width: 767px) {
@@ -217,8 +227,10 @@ footer ol div a { font-size: 0.8em; }
 
 	/* Main Layout */
 	
-	header > div,
-	footer > div { padding: 10px; }
+	header > div { padding: 10px 0; }
+	footer > div { padding: 0 0 10px; }
+
+	#main { padding: 10px 0; }
 
 	.touch #nav > li { float: left; width: 50%; }
 	
