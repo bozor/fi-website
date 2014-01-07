@@ -3,7 +3,11 @@
 			<div id="header-overlay">
 				<a href="#" id="logo">logo</a>
 				
-				<span id="mobile-menu"></span>
+				<span id="mobile-menu">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</span>
 			</div>
 			<ol id="nav">
 				<li id="nav-home"><a href="index.htm">Home</a></li>

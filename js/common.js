@@ -259,7 +259,7 @@ var Ui = {
 			} else {
 				Globals.navHideAnimate = true;
 			}
-			$('#mobile-menu').toggleClass('close');
+			$('#mobile-menu').toggleClass('active');
 		}
 	},
 	setActiveNav: function(elem) {
@@ -318,6 +318,7 @@ var Ui = {
 		<a href="#" class="close-cookie-overlay">x</a>\
 		<p id="cookie-set">set your cookie:&nbsp;&nbsp;<a href="#" id="cookie1">cookie 1</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="#" id="cookie2">cookie 2</a></p>'
 		
+		$('body').addClass('content-blur');
 		$('body').prepend('<div id="industry-select-container">'+content+'</div><div id="fade"></div>');
 		
 		Events.setCookie();
@@ -328,6 +329,7 @@ var Ui = {
 		$('#industry-select-container').fadeOut(500, function(){
 			$('#fade, #industry-select-container').remove();
 		});
+		$('body').removeClass('content-blur');
 	}
 }
 
