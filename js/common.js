@@ -316,17 +316,25 @@ var Ui = {
 	showCookieSet: function(){
 		var content = '\
 		<a href="#" class="close-cookie-overlay">x</a>\
-		<p id="cookie-set">set your cookie:&nbsp;&nbsp;<a href="#" id="cookie1">cookie 1</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="#" id="cookie2">cookie 2</a></p>'
+		<p id="cookie-set">Select your area of interest:&nbsp;&nbsp;<a href="#" id="cookie1">Industrial</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="#" id="cookie2">Scientific</a></p>'
 		
 		$('body').addClass('content-blur');
-		$('body').prepend('<div id="industry-select-container">'+content+'</div><div id="fade"></div>');
 		
-		Events.setCookie();
-		Events.closeCookieOverlay();
+		
+		$('body').prepend('<div id="industry-select-container">'+content+'</div><div id="fade"></div>');
+		$('#fade').animate({
+			opacity: 0.7
+		}, 500, function(){
+			$('#industry-select-container').show();
+			Events.setCookie();
+			Events.closeCookieOverlay();
+		});
+
+	
 	},
 	closeCookieSet: function(){
-		$('#fade').fadeOut(500);
-		$('#industry-select-container').fadeOut(500, function(){
+		$('#fade').fadeOut(350);
+		$('#industry-select-container').fadeOut(350, function(){
 			$('#fade, #industry-select-container').remove();
 		});
 		$('body').removeClass('content-blur');
