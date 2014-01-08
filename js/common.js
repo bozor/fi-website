@@ -319,8 +319,7 @@ var Ui = {
 		<p id="cookie-set">Select your area of interest:&nbsp;&nbsp;<a href="#" id="cookie1">Industrial</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="#" id="cookie2">Scientific</a></p>'
 		
 		$('body').addClass('content-blur');
-		
-		
+
 		$('body').prepend('<div id="industry-select-container">'+content+'</div><div id="fade"></div>');
 		$('#fade').animate({
 			opacity: 0.7
@@ -329,8 +328,6 @@ var Ui = {
 			Events.setCookie();
 			Events.closeCookieOverlay();
 		});
-
-	
 	},
 	closeCookieSet: function(){
 		$('#fade').fadeOut(350);

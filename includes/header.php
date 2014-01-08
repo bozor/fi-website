@@ -25,6 +25,7 @@
 					<a href="contact-form.htm">Products</a>
 					<div>
 						<ul>
+							<li><a href="#">Introduction</a></li>
 							<li><a href="#">Supercontinuum sources</a></li>
 							<li><a href="#">FemtoPower fiber lasers</a></li>
 							<li><a href="#">HE high-energy fiber lasers</a></li>
@@ -46,6 +47,7 @@
 					<a href="#">News</a>
 					<div>
 						<ul>
+							<li><a href="#">All news</a></li>
 							<li><a href="#">Company news</a></li>
 							<li><a href="#">Product news</a></li>
 							<li><a href="#">Upcoming events</a></li>
