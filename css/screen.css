@@ -145,6 +145,7 @@ body.content-blur #main { -webkit-filter: blur(3px); }
 .touch #nav > li { float: none; margin-right: 0; border-bottom: 1px solid #656565; }
 .touch #nav > li > div { display: block; position: relative; width: 100%; background: #333; max-height: 0; height: auto; right: auto; padding-top: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 0; -webkit-transition: 350ms all ease; -moz-transition: 350ms all ease; -o-transition: 350ms all ease; -ms-transition: 350ms all ease; transition: 350ms all ease; }
 .touch #nav > li > a { display: block; background: transparent; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; padding: 10px 16px 9px; color: #989f98; text-decoration: underline; text-decoration: none; text-transform: uppercase; }
+.touch #nav > li > a:active { background: #565656; }
 .touch #nav > li > a.sub-menu-open { color: #e8e8e8; /*background: #333;*/ } 
 .touch #nav > li > div.sub-menu-open { display: block; max-height: 999px; -webkit-transition: 350ms all ease; -moz-transition: 350ms all ease; -o-transition: 350ms all ease; -ms-transition: 350ms all ease; transition: 350ms all ease; }
 .touch #nav ul { padding-bottom: 0; border-top: 1px solid #656565; padding: 6px 0; }
