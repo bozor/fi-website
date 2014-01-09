@@ -56,7 +56,7 @@ footer > div { padding: 20px 0px; overflow: hidden; border-top: 1px solid #e8e8e
 #main { padding: 20px 0; -webkit-transition: 1000ms all ease; -moz-transition: 1000ms all ease; -o-transition: 1000ms all ease; -ms-transition: 1000ms all ease; transition: 1000ms all ease; }
 #wrapper { overflow: hidden; }
 
-#splash { background: rgba(140,0,0,0.3); }
+#splash { background: rgba(140,0,0,0.3); opacity: 0; }
 #links { background: rgba(0,190,0,0.3); }
 #content { background: rgba(0,0,80,0.3); }
 #other { background: rgba(20,50,190,0.3); }
@@ -108,21 +108,21 @@ body.content-blur #main { -webkit-filter: blur(3px); }
 /* ---------------- */
 /* Header */
 
-#logo { float: left; display: block; width: 150px; height: 44px; background: url(../images/imagemap.png) 0 0 no-repeat; text-indent: -9999px; cursor: pointer; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; }
+#logo { float: left; display: block; width: 150px; height: 44px; background: #ccc /* url(../images/imagemap.png) 0 0 no-repeat*/; text-indent: -9999px; cursor: pointer; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; opacity: 0.05; }
 #logo:hover { opacity: 0.6; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; }
 
 #nav { position: absolute; right: -10px; padding-top: 5px; }
 #nav > li { float: left; position: relative; margin-right: 10px; }
 #nav > li > a { display: inline-block; padding: 6px 10px; color: #989f98; background: #f7f7f7; font-size: 0.95em; text-decoration: none; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; border-radius: 4px; }
-#nav > li.active > a, 
+/*#nav > li.active > a, 
 #nav > li.active:hover > a,
 #nav > li:hover > a { background: #454545; color: #e8e8e8; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; border-radius: 4px 4px 0 0; padding-bottom: 16px; }
 #nav > li#nav-home.active > a,
 #nav > li#nav-home:hover > a { border-radius: 4px; padding-bottom: 6px; }
-#nav > li.active > a { border-radius: 4px; padding-bottom: 6px; }
-#nav > li > div { position: absolute; right: 0; display: table-row; overflow: hidden; width: 180px; height: 0; border-radius: 4px 0 4px 4px; }
-#nav > li:hover > div,
-#nav > li > div:hover { height: auto; background: #454545; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; }
+#nav > li.active > a { border-radius: 4px; padding-bottom: 6px; }*/
+#nav > li > div { position: absolute; right: 0; display: table-row; overflow: hidden; width: 180px; height: 0; border-radius: 4px 0 4px 4px; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; }
+/*#nav > li:hover > div,
+#nav > li > div:hover { height: auto; background: #454545; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; }*/
 
 #nav ul { padding-bottom: 10px; }
 #nav ul a { display: inline-block; padding: 10px 10px 0; color: #e8e8e8; font-size: 0.8em; }
@@ -130,17 +130,20 @@ body.content-blur #main { -webkit-filter: blur(3px); }
 
 /* touch version */
 
-.touch header > div { min-height: 50px; height: auto; background: #ccc; }
+.touch header > div { min-height: 50px; height: auto; }
 
 .touch #header-overlay { position: relative; width: 100%; height: 44px; padding: 10px 0; overflow: hidden; z-index: 20; }
 	
-.touch #nav { position: relative; right: 0; overflow: visible; max-height: 0; clear: both; border-radius: 4px; padding: 0; background: #454545; }
+.touch #nav { position: relative; right: 0; overflow: hidden; max-height: 0; clear: both; border-radius: 4px; padding: 0; background: #454545; }
 .touch #nav.hidden { max-height: 0; -webkit-transition: 500ms all ease; -moz-transition: 500ms all ease; -o-transition: 500ms all ease; -ms-transition: 500ms all ease; transition: 500ms all ease; }
-.touch #nav.visible { max-height: 999px; -webkit-transition: 500ms all ease; -moz-transition: 500ms all ease; -o-transition: 500ms all ease; -ms-transition: 500ms all ease; transition: 500ms all ease; /*padding: 5px 0;*/ }
+.touch #nav.visible { max-height: 999px; -webkit-transition: 500ms all ease; -moz-transition: 500ms all ease; -o-transition: 500ms all ease; -ms-transition: 500ms all ease; transition: 500ms all ease; }
 	
-.touch #nav > li { margin-right: 0; }
-.touch #nav > li > div { display: block; position: relative; width: 100%; height: auto; padding-top: 0; margin-top: -3px; padding-left: 6px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 0; }
+.touch #nav > li { float: none; margin-right: 0; }
+.touch #nav > li > div { display: none; position: relative; width: 100%; height: 0; padding-top: 0; padding-left: 6px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 0; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; }
 .touch #nav > li > a { background: transparent; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; padding: 6px 16px 0px; color: #989f98; text-decoration: underline; margin-bottom: 5px; }
+.touch #nav > li > a.sub-menu-closed { color: red; }
+.touch #nav > li > a.sub-menu-open { color: green; }
+.touch #nav > li > div.sub-menu-open { display: block; height: auto; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; }
 .touch #nav ul { padding-bottom: 4px; padding-right: 10px; }
 .touch #nav ul a { padding-top: 0px; padding-bottom: 3px; }
 	
@@ -174,11 +177,10 @@ footer ol div a { font-size: 0.8em; }
 /* high res */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	#logo { -webkit-background-size: 960px 600px; display: none; }
+	#logo { -webkit-background-size: 960px 600px; }
 
 	#logo { background-position: -480px 0; }
-	
-	#splash { opacity: 0; }
+
 }
 
 @media only screen and (min-width: 1176px) {
@@ -210,7 +212,7 @@ footer ol div a { font-size: 0.8em; }
 	.col-2 #links { width: 30%; }
 
 	.touch #nav { position: absolute; right: 0; width: 50%; margin-left: 50%; }
-	.touch #nav > li { float: left; width: 33%; }
+	/*.touch #nav > li { float: left; width: 33%; }*/
 	.touch #nav ul { margin-bottom: 0; padding-bottom: 0; }
 
 	/* Footer */
@@ -229,7 +231,7 @@ footer ol div a { font-size: 0.8em; }
 	#narrow { float: left; width: 35%; }
 	.col-2 #links { width: 35%; }
 
-	.touch #nav > li { float: left; width: 50%; }
+	/*.touch #nav > li { float: left; width: 50%; }*/
 }
 
 @media only screen and (max-width: 767px) {
@@ -244,7 +246,7 @@ footer ol div a { font-size: 0.8em; }
 
 	#main { padding: 10px 0; }
 
-	.touch #nav > li { float: left; width: 50%; }
+	/*.touch #nav > li { float: left; width: 50%; }*/
 	
 	#links,
 	#content,
@@ -273,6 +275,6 @@ footer ol div a { font-size: 0.8em; }
 
 	/* Header */
 	
-	.touch #nav > li { float: left; width: 33%; }
+	/*.touch #nav > li { float: left; width: 33%; }*/
 }
 

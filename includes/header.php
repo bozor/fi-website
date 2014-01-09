@@ -12,20 +12,20 @@
 			<ol id="nav">
 				<li id="nav-home"><a href="index.htm">Home</a></li>
 				<li id="nav-about">
-					<a href="map.htm">Company</a>
+					<a href="#" class="sub-menu sub-menu-closed">Company</a>
 					<div>
 						<ul>
-							<li><a href="#">About us</a></li>
+							<li><a href="map.htm">About us</a></li>
 							<li><a href="#">Management</a></li>
 							<li><a href="#">Careers</a></li>
 						</ul>
 					</div>
 				</li>
 				<li id="nav-products">
-					<a href="contact-form.htm">Products</a>
+					<a href="#" class="sub-menu sub-menu-closed">Products</a>
 					<div>
 						<ul>
-							<li><a href="#">Introduction</a></li>
+							<li><a href="contact-form.htm" >Introduction</a></li>
 							<li><a href="#">Supercontinuum sources</a></li>
 							<li><a href="#">FemtoPower fiber lasers</a></li>
 							<li><a href="#">HE high-energy fiber lasers</a></li>
@@ -35,7 +35,7 @@
 					</div>
 				</li>
 				<li id="nav-application">
-					<a href="#">Applications</a>
+					<a href="#" class="sub-menu sub-menu-closed">Applications</a>
 					<div>
 						<ul>
 							<li><a href="#">Overview</a></li>
@@ -44,7 +44,7 @@
 					</div>
 				</li>
 				<li id="nav-news">
-					<a href="#">News</a>
+					<a href="#" class="sub-menu sub-menu-closed">News</a>
 					<div>
 						<ul>
 							<li><a href="#">All news</a></li>
@@ -56,7 +56,7 @@
 					</div>
 				</li>
 				<li id="nav-contact">
-					<a href="#">Contact Us</a>
+					<a href="#" class="sub-menu sub-menu-closed">Contact Us</a>
 					<div>
 						<ul>
 							<li><a href="#">Fianium offices</a></li>

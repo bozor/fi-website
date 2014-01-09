@@ -102,12 +102,21 @@ var Events = {
 		if($('#mobile-menu').is(':visible')){
 			$('#nav > li > div').show();
 			
-			Ui.menu.initIsotope();
+			//Ui.menu.initIsotope();
 		
 			$('#mobile-menu').click(function(e){
 				Ui.menu.toggle();
 			});
 		}
+		
+		$('.sub-menu').click(function(e){
+			e.preventDefault();
+			
+			$(this).toggleClass('sub-menu-open');
+			$(this).toggleClass('sub-menu-closed');
+			
+			$(this).next('div').toggleClass('sub-menu-open');
+		});
 		
 		FastClick.attach(document.body);
 	},
@@ -229,7 +238,7 @@ var Events = {
 	},
 	onOrientationChange: function() {
 		// reload isotope
-		$('#nav').isotope('reLayout');
+		//$('#nav').isotope('reLayout');
 	},
 	resizeHandler: function () {
 		if($(window).height() != Globals.lastWindowHeight || $(window).width() != Globals.lastWindowWidth){
