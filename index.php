@@ -16,7 +16,16 @@
 	<article id="main">
 		<div id="wrapper">
 			<section id="splash">
-				<img src="images/splash/home.png" />
+				<a href="">
+					<img src="images/splash/home.png" />
+					<span class="splash-title">
+						<strong>Fianium</strong>
+						<span>Worldwide Supplier of<br/>Ultrafast Fiber Lasers</span>
+					</span>
+					<span class="splash-cta">
+						<span>Discover our product range &rsaquo;</span>
+					</span>
+				</a>
 			</section>
 			<div class="col-3">
 				<section id="content">

@@ -97,7 +97,7 @@ var Ajax = {
 
 var Events = {
 	menu: function(){
-		$('#nav > li > div').hide();
+		//$('#nav > li > div').hide();
 
 		if($('#mobile-menu').is(':visible')){
 			$('#nav > li > div').show();
@@ -493,14 +493,15 @@ var Cookies = {
 $(function (){
 	Cookies.showContent();
 	Events.openCookieOverlay();
-	
+
 	if ('ontouchstart' in window) {
 		$('html').addClass('touch');
-		Events.menu();
 		Map.defaultZoom = 1;
 
 		window.addEventListener('orientationchange', Events.onOrientationChange);
 	}
+	
+	Events.menu();
 	
 	$('#back-to-top').click(function(e){
 		$.scrollTo(0, 250);
