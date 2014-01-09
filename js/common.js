@@ -112,10 +112,16 @@ var Events = {
 		$('.sub-menu').click(function(e){
 			e.preventDefault();
 			
-			$(this).toggleClass('sub-menu-open');
-			$(this).toggleClass('sub-menu-closed');
-			
-			$(this).next('div').toggleClass('sub-menu-open');
+			if($(this).hasClass('sub-menu-open')){
+				$(this).removeClass('sub-menu-open');
+				$(this).next('div').removeClass('sub-menu-open')
+			} else {
+				$('.sub-menu').removeClass('sub-menu-open');
+				$(this).addClass('sub-menu-open');
+				
+				$('.sub-menu').next('div').removeClass('sub-menu-open');
+				$(this).next('div').addClass('sub-menu-open');
+			}
 		});
 		
 		FastClick.attach(document.body);

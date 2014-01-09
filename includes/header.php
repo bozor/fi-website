@@ -12,7 +12,7 @@
 			<ol id="nav">
 				<li id="nav-home"><a href="index.htm">Home</a></li>
 				<li id="nav-about">
-					<a href="#" class="sub-menu sub-menu-closed">Company</a>
+					<a href="#" class="sub-menu">Company<i></i></a>
 					<div>
 						<ul>
 							<li><a href="map.htm">About us</a></li>
@@ -22,7 +22,7 @@
 					</div>
 				</li>
 				<li id="nav-products">
-					<a href="#" class="sub-menu sub-menu-closed">Products</a>
+					<a href="#" class="sub-menu">Products<i></i></a>
 					<div>
 						<ul>
 							<li><a href="contact-form.htm" >Introduction</a></li>
@@ -35,7 +35,7 @@
 					</div>
 				</li>
 				<li id="nav-application">
-					<a href="#" class="sub-menu sub-menu-closed">Applications</a>
+					<a href="#" class="sub-menu">Applications<i></i></a>
 					<div>
 						<ul>
 							<li><a href="#">Overview</a></li>
@@ -44,7 +44,7 @@
 					</div>
 				</li>
 				<li id="nav-news">
-					<a href="#" class="sub-menu sub-menu-closed">News</a>
+					<a href="#" class="sub-menu">News<i></i></a>
 					<div>
 						<ul>
 							<li><a href="#">All news</a></li>
@@ -56,7 +56,7 @@
 					</div>
 				</li>
 				<li id="nav-contact">
-					<a href="#" class="sub-menu sub-menu-closed">Contact Us</a>
+					<a href="#" class="sub-menu">Contact Us<i></i></a>
 					<div>
 						<ul>
 							<li><a href="#">Fianium offices</a></li>

@@ -114,6 +114,8 @@ body.content-blur #main { -webkit-filter: blur(3px); }
 #nav { position: absolute; right: -10px; padding-top: 5px; }
 #nav > li { float: left; position: relative; margin-right: 10px; }
 #nav > li > a { display: inline-block; padding: 6px 10px; color: #989f98; background: #f7f7f7; font-size: 0.95em; text-decoration: none; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; border-radius: 4px; }
+#nav > li.active > a { color: #e8e8e8; }
+
 /*#nav > li.active > a, 
 #nav > li.active:hover > a,
 #nav > li:hover > a { background: #454545; color: #e8e8e8; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; border-radius: 4px 4px 0 0; padding-bottom: 16px; }
@@ -123,6 +125,8 @@ body.content-blur #main { -webkit-filter: blur(3px); }
 #nav > li > div { position: absolute; right: 0; display: table-row; overflow: hidden; width: 180px; height: 0; border-radius: 4px 0 4px 4px; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; }
 /*#nav > li:hover > div,
 #nav > li > div:hover { height: auto; background: #454545; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; }*/
+#nav > li > a.sub-menu > i { position: absolute; top: 16px; right: 16px; display: block; width: 0; height: 0; border-left: 3px solid transparent; border-right: 3px solid transparent; border-top: 6px solid #656565; -webkit-transition: 350ms all ease; -moz-transition: 350ms all ease; -o-transition: 350ms all ease; -ms-transition: 350ms all ease; transition: 350ms all ease; }
+#nav > li > a.sub-menu-open > i { transform: rotate(180deg); -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); border-top-color: #e8e8e8; }
 
 #nav ul { padding-bottom: 10px; }
 #nav ul a { display: inline-block; padding: 10px 10px 0; color: #e8e8e8; font-size: 0.8em; }
@@ -130,7 +134,7 @@ body.content-blur #main { -webkit-filter: blur(3px); }
 
 /* touch version */
 
-.touch header > div { min-height: 50px; height: auto; }
+.touch header > div { }
 
 .touch #header-overlay { position: relative; width: 100%; height: 44px; padding: 10px 0; overflow: hidden; z-index: 20; }
 	
@@ -138,14 +142,13 @@ body.content-blur #main { -webkit-filter: blur(3px); }
 .touch #nav.hidden { max-height: 0; -webkit-transition: 500ms all ease; -moz-transition: 500ms all ease; -o-transition: 500ms all ease; -ms-transition: 500ms all ease; transition: 500ms all ease; }
 .touch #nav.visible { max-height: 999px; -webkit-transition: 500ms all ease; -moz-transition: 500ms all ease; -o-transition: 500ms all ease; -ms-transition: 500ms all ease; transition: 500ms all ease; }
 	
-.touch #nav > li { float: none; margin-right: 0; }
-.touch #nav > li > div { display: none; position: relative; width: 100%; height: 0; padding-top: 0; padding-left: 6px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 0; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; }
-.touch #nav > li > a { background: transparent; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; padding: 6px 16px 0px; color: #989f98; text-decoration: underline; margin-bottom: 5px; }
-.touch #nav > li > a.sub-menu-closed { color: red; }
-.touch #nav > li > a.sub-menu-open { color: green; }
-.touch #nav > li > div.sub-menu-open { display: block; height: auto; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; }
-.touch #nav ul { padding-bottom: 4px; padding-right: 10px; }
-.touch #nav ul a { padding-top: 0px; padding-bottom: 3px; }
+.touch #nav > li { float: none; margin-right: 0; border-bottom: 1px solid #656565; }
+.touch #nav > li > div { display: block; position: relative; width: 100%; background: #333; max-height: 0; height: auto; right: auto; padding-top: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 0; -webkit-transition: 350ms all ease; -moz-transition: 350ms all ease; -o-transition: 350ms all ease; -ms-transition: 350ms all ease; transition: 350ms all ease; }
+.touch #nav > li > a { display: block; background: transparent; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; padding: 10px 16px 9px; color: #989f98; text-decoration: underline; text-decoration: none; text-transform: uppercase; }
+.touch #nav > li > a.sub-menu-open { color: #e8e8e8; /*background: #333;*/ } 
+.touch #nav > li > div.sub-menu-open { display: block; max-height: 999px; -webkit-transition: 350ms all ease; -moz-transition: 350ms all ease; -o-transition: 350ms all ease; -ms-transition: 350ms all ease; transition: 350ms all ease; }
+.touch #nav ul { padding-bottom: 0; border-top: 1px solid #656565; padding: 6px 0; }
+.touch #nav ul a { display: block; text-decoration: none; padding: 6px 16px; }
 	
 .touch #mobile-menu { float: right; display: block; width: 40px; height: 28px; border-radius: 4px; padding-top: 10px; -webkit-transition: 200ms all linear; -moz-transition: 200ms all linear; -o-transition: 200ms all linear; -ms-transition: 200ms all linear; transition: 200ms all linear; overflow: hidden; background: #454545; }
 .touch #mobile-menu.close { opacity: 1; }
