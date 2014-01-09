@@ -130,19 +130,17 @@ body.content-blur #main { -webkit-filter: blur(3px); }
 
 /* touch version */
 
+.touch header > div { min-height: 50px; height: auto; background: #ccc; }
+
 .touch #header-overlay { position: relative; width: 100%; height: 44px; padding: 10px 0; overflow: hidden; z-index: 20; }
 	
-.touch #nav { position: relative; right: 0; overflow: hidden; max-height: 0; clear: both; border-radius: 4px; padding: 0; background: #454545; }
+.touch #nav { position: relative; right: 0; overflow: visible; max-height: 0; clear: both; border-radius: 4px; padding: 0; background: #454545; }
 .touch #nav.hidden { max-height: 0; -webkit-transition: 500ms all ease; -moz-transition: 500ms all ease; -o-transition: 500ms all ease; -ms-transition: 500ms all ease; transition: 500ms all ease; }
 .touch #nav.visible { max-height: 999px; -webkit-transition: 500ms all ease; -moz-transition: 500ms all ease; -o-transition: 500ms all ease; -ms-transition: 500ms all ease; transition: 500ms all ease; /*padding: 5px 0;*/ }
 	
 .touch #nav > li { margin-right: 0; }
 .touch #nav > li > div { display: block; position: relative; width: 100%; height: auto; padding-top: 0; margin-top: -3px; padding-left: 6px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 0; }
 .touch #nav > li > a { background: transparent; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; padding: 6px 16px 0px; color: #989f98; text-decoration: underline; margin-bottom: 5px; }
-.touch #nav > li > a:hover { color: #e8e8e8; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; text-decoration: none; }
-.touch #nav > li:hover > a { background: transparent; color: #989f98; }
-.touch #nav > li:hover > div,
-.touch #nav > li > div:hover { background: transparent; color: auto; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; }
 .touch #nav ul { padding-bottom: 4px; padding-right: 10px; }
 .touch #nav ul a { padding-top: 0px; padding-bottom: 3px; }
 	
@@ -176,9 +174,11 @@ footer ol div a { font-size: 0.8em; }
 /* high res */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	#logo { -webkit-background-size: 960px 600px; }
+	#logo { -webkit-background-size: 960px 600px; display: none; }
 
 	#logo { background-position: -480px 0; }
+	
+	#splash { opacity: 0; }
 }
 
 @media only screen and (min-width: 1176px) {
