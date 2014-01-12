@@ -75,9 +75,9 @@ footer > div { padding: 20px 0px; overflow: hidden; border-top: 1px solid #e8e8e
 .col-2 #content { width: 74%; }
 .col-2 #links { width: 26%; }
 
-#splash > img { max-width: 100%; height: auto; display: block; }
+#splash > img,
+#splash > a > img { max-width: 100%; height: auto; display: block; border: 0; }
 #splash > a { position: relative; max-width: 100%; height: auto; display: block; }
-#splash > a > img { margin-bottom: 0; border: 0; }
 #splash > a > span { position: absolute; text-align: right; display: inline-block; margin-right: 2em; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 #splash > a > .splash-title { top: 1em; right: 0; color: #fff; width: 30%; }
 #splash > a > .splash-title > strong { font-family: 'dincond-boldbold'; font-size: 6em; text-transform: uppercase; display: block; letter-spacing: -0.05em; }
@@ -101,7 +101,7 @@ footer > div { padding: 20px 0px; overflow: hidden; border-top: 1px solid #e8e8e
 
 body.content-blur header,
 body.content-blur footer,
-body.content-blur #main { -webkit-filter: blur(3px); }
+body.content-blur #main { /*-webkit-filter: blur(3px);*/ }
 
 #industry-select-container,
 #fade { position: fixed; width: 100%; height: 100%; left: 0; top: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -244,6 +244,9 @@ footer ol div a { font-size: 0.8em; }
 	.col-2 #content { width: 65%; }
 	#narrow { float: left; width: 35%; }
 	.col-2 #links { width: 35%; }
+	
+	#splash > a > .splash-title { font-size: 0.5em; }
+	#splash > a > .splash-cta { font-size: 0.8em; }
 }
 
 @media only screen and (max-width: 767px) {
@@ -267,6 +270,9 @@ footer ol div a { font-size: 0.8em; }
 	.col-3 #links,
 	.col-3 #content,
 	.col-3 #other { float: none; width: 100%; }
+	
+	#splash > a > .splash-title { font-size: 0.6em; }
+	#splash > a > .splash-cta { font-size: 0.6em; }
 	
 	/* maps */
 	
