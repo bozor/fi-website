@@ -34,11 +34,12 @@ a:hover { text-decoration: none; }
     font-style: normal;
 }
 
-h1 { color: #414042; /*color: #e82c2e;*/ font-family: 'dincond-boldbold'; font-size: 2.6em; letter-spacing: -0.05em; /*text-transform: uppercase;*/ }
-h2 { color: #414042; font-family: 'dincond-regularregular'; font-size: 1.85em; letter-spacing: -0.05em; }
+h1 { color: #414042; /*color: #e82c2e;*/ font-family: 'dincond-boldbold'; font-size: 3em; line-height: 1em; letter-spacing: -0.05em; padding-bottom: 20px; }
+h2 { color: #414042; font-family: 'dincond-regularregular'; font-size: 1.85em; letter-spacing: -0.05em; padding-bottom: 15px; }
 h2 span { font-family: 'dincond-boldbold'; }
 
-p { color: #414042; font-size: 0.9em; line-height: 1.5em; }
+p { font-family: 'Source Sans Pro', sans-serif; color: #414042; font-size: 0.9em; line-height: 1.5em; padding-bottom: 15px; }
+p.large { font-size: 1.15em; line-height: 1.3em; }
 
 /* ---------------- */
 /* Main Layout */
@@ -56,17 +57,17 @@ footer > div { padding: 20px 0px; overflow: hidden; border-top: 1px solid #e8e8e
 #main { padding: 20px 0; -webkit-transition: 1000ms all ease; -moz-transition: 1000ms all ease; -o-transition: 1000ms all ease; -ms-transition: 1000ms all ease; transition: 1000ms all ease; }
 #wrapper { overflow: hidden; }
 
-#splash { background: rgba(140,0,0,0.3); }
+/*#splash { background: rgba(140,0,0,0.3); }
 #links { background: rgba(0,190,0,0.3); }
 #content { background: rgba(0,0,80,0.3); }
-#other { background: rgba(20,50,190,0.3); }
+#other { background: rgba(20,50,190,0.3); }*/
 
 /* content page */
 
-#splash { float: none; width: 100%; }
-#content { float: left; }
-#other { float: right; }
-#links { float: right; }
+#splash { float: none; width: 100%; padding-bottom: 2em; }
+#content { float: left; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding-right: 10px; }
+#other { float: right; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0 10px; }
+#links { float: right; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding-left: 10px; }
 
 .col-3 #content { width: 48%; }
 .col-3 #other { width: 26%; }
@@ -78,12 +79,18 @@ footer > div { padding: 20px 0px; overflow: hidden; border-top: 1px solid #e8e8e
 #splash > img,
 #splash > a > img { max-width: 100%; height: auto; display: block; border: 0; }
 #splash > a { position: relative; max-width: 100%; height: auto; display: block; }
-#splash > a > span { position: absolute; text-align: right; display: inline-block; margin-right: 2em; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-#splash > a > .splash-title { top: 1em; right: 0; color: #fff; width: 30%; }
-#splash > a > .splash-title > strong { font-family: 'dincond-boldbold'; font-size: 6em; text-transform: uppercase; display: block; letter-spacing: -0.05em; }
-#splash > a > .splash-title > span { font-family: 'dincond-regularregular'; font-size: 2.8em; opacity: 0.65; letter-spacing: -0.05em; }
-#splash > a > .splash-cta { right: 0; bottom: 2em; }
-#splash > a > .splash-cta > span { font-family: 'dincond-regularregular'; font-size: 1.6em; color: #fff; text-decoration: underline; }
+#splash > a > span { position: absolute; padding: 1.5em 1.5em 1.5em 0; top: 0; right: 0; width: 33%; height: 100%; text-align: right; display: block; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+#splash > a .splash-title { display: block; color: #fff; background: #ccc; }
+#splash > a .splash-title > strong { font-family: 'dincond-boldbold'; /*font-size: 6em;*/ font-size: 3.2em; text-transform: uppercase; display: block; letter-spacing: -0.05em; }
+#splash > a .splash-title > span { font-family: 'dincond-regularregular'; /*font-size: 2.8em;*/ font-size: 1.45em; opacity: 0.65; letter-spacing: -0.05em; }
+#splash > a .splash-cta { display: block; position: absolute; bottom: 1.5em; right: 1.5em; font-size: 1.8em; font-family: 'dincond-regularregular'; /*font-size: 1.6em;*/ color: #fff; text-decoration: underline; }
+
+#other .latest-tweets { background: #5ea9dd; padding: 1em; }
+#other .latest-tweets h2 { color: #fff; text-transform: uppercase; padding-bottom: 8px; }
+#other .latest-tweets .tweet_list { font-family: 'Source Sans Pro', sans-serif; color: #fff; font-size: 0.9em; line-height: 1.5em; }
+#other .latest-tweets .tweet_list a { color: #fff; }
+#other .latest-tweets p { padding-bottom: 0; padding-top: 15px; }
+#other .latest-tweets p a { color: #fff; font-weight: bold; }
 
 /* product page */
 
@@ -182,7 +189,7 @@ body.content-blur #main { /*-webkit-filter: blur(3px);*/ }
 
 #footer-text { float: left; width: 30%; }
 
-footer p { margin-top: 10px; }
+footer p { }
 
 footer ol { overflow: hidden; float: right; width: 65%; padding-top: 10px; }
 footer ol > li { float: left; width: 16%; }
@@ -224,7 +231,7 @@ footer ol div a { font-size: 0.8em; }
 	.col-2 #content { width: 70%; }
 	#narrow { float: left; width: 30%; }
 	.col-3 #narrow #other,
-	.col-3 #narrow #links { float: none; width: 100%; }
+	.col-3 #narrow #links { float: none; width: 100%; padding: 0; }
 	.col-2 #links { width: 30%; }
 
 	.touch #nav { position: absolute; right: 0; width: 50%; margin-left: 50%; }
@@ -245,8 +252,8 @@ footer ol div a { font-size: 0.8em; }
 	#narrow { float: left; width: 35%; }
 	.col-2 #links { width: 35%; }
 	
-	#splash > a > .splash-title { font-size: 0.5em; }
-	#splash > a > .splash-cta { font-size: 0.8em; }
+	/*#splash > a > .splash-title { font-size: 0.5em; }
+	#splash > a > .splash-cta { font-size: 0.8em; }*/
 }
 
 @media only screen and (max-width: 767px) {
@@ -263,7 +270,7 @@ footer ol div a { font-size: 0.8em; }
 
 	#links,
 	#content,
-	#other { float: none; width: 100%; }
+	#other { float: none; width: 100%; padding: 0; }
 	
 	.col-2 #links,
 	.col-2 #content,
@@ -271,8 +278,8 @@ footer ol div a { font-size: 0.8em; }
 	.col-3 #content,
 	.col-3 #other { float: none; width: 100%; }
 	
-	#splash > a > .splash-title { font-size: 0.6em; }
-	#splash > a > .splash-cta { font-size: 0.6em; }
+	/*#splash > a > .splash-title { font-size: 0.6em; }
+	#splash > a > .splash-cta { font-size: 0.6em; }*/
 	
 	/* maps */
 	

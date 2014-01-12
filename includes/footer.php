@@ -2,8 +2,8 @@
 		<div class="content">
 			<div id="footer-text">
 				<p><a id="back-to-top">Top</a></p>
-				<p id="copyright">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				<p id="footer-address">Donec tristique tempus ligula elementum vehicula. In ultricies pretium nisl vel eleifend.</p>
+				<p id="copyright">&copy; Copyright 2003-2014 Fianium Ltd.</p>
+				<p id="footer-address">Fianium Ltd, 20 Compass Point, Ensign Way, Southampton, SO31 4RA<br/>Company Reg. No: 4645475</p>
 				<p><a href="#" class="show-set-industry">Change your industry</a></p>
 			</div>
 			<ol>

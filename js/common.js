@@ -284,7 +284,7 @@ var Ui = {
 	twitter: function(){
 		$('.twitter').tweet({
 			modpath: 'twitter/',
-			username: 'bbcsport',
+			username: 'fianiumltd',
 			count: 1,
 			loading_text: 'loading twitter feed...',
 		});
@@ -494,6 +494,8 @@ $(function (){
 	Cookies.showContent();
 	Events.openCookieOverlay();
 
+	//$('#splash .splash-title, #splash .splash-cta').fitText();
+	$('h1,h2').fitText();
 	if ('ontouchstart' in window) {
 		$('html').addClass('touch');
 		Map.defaultZoom = 1;
