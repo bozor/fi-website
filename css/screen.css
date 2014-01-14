@@ -35,7 +35,7 @@ a:hover { text-decoration: none; }
 }
 
 h1 { color: #414042; /*color: #e82c2e;*/ font-family: 'dincond-boldbold'; font-size: 3em; line-height: 1em; letter-spacing: -0.05em; padding-bottom: 20px; }
-h2 { color: #414042; font-family: 'dincond-regularregular'; font-size: 1.85em; letter-spacing: -0.05em; padding-bottom: 15px; }
+h2 { color: #414042; font-family: 'dincond-regularregular'; font-size: 1.8em; letter-spacing: -0.05em; padding-bottom: 15px; }
 h2 span { font-family: 'dincond-boldbold'; }
 
 p { font-family: 'Source Sans Pro', sans-serif; color: #414042; font-size: 0.9em; line-height: 1.5em; padding-bottom: 15px; }
@@ -64,10 +64,10 @@ footer > div { padding: 20px 0px; overflow: hidden; border-top: 1px solid #e8e8e
 
 /* content page */
 
-#splash { float: none; width: 100%; padding-bottom: 2em; }
+#splash { float: none; width: 100%; padding-bottom: 20px; }
 #content { float: left; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding-right: 10px; }
-#other { float: right; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0 10px; }
-#links { float: right; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding-left: 10px; }
+#other { float: right; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding-left: 10px; }
+#links { float: right; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0 10px; }
 
 .col-3 #content { width: 48%; }
 .col-3 #other { width: 26%; }
@@ -85,12 +85,23 @@ footer > div { padding: 20px 0px; overflow: hidden; border-top: 1px solid #e8e8e
 #splash > a .splash-title > span { font-family: 'dincond-regularregular'; /*font-size: 2.8em;*/ font-size: 1.45em; opacity: 0.65; letter-spacing: -0.05em; }
 #splash > a .splash-cta { display: block; position: absolute; bottom: 1.5em; right: 1.5em; font-size: 1.8em; font-family: 'dincond-regularregular'; /*font-size: 1.6em;*/ color: #fff; text-decoration: underline; }
 
-#other .latest-tweets { background: #5ea9dd; padding: 1em; }
+#other .latest-tweets { background: #5ea9dd; padding: 1em; margin-bottom: 20px; }
 #other .latest-tweets h2 { color: #fff; text-transform: uppercase; padding-bottom: 8px; }
 #other .latest-tweets .tweet_list { font-family: 'Source Sans Pro', sans-serif; color: #fff; font-size: 0.9em; line-height: 1.5em; }
 #other .latest-tweets .tweet_list a { color: #fff; }
-#other .latest-tweets p { padding-bottom: 0; padding-top: 15px; }
+#other .latest-tweets p { padding-bottom: 0; padding-top: 12px; }
 #other .latest-tweets p a { color: #fff; font-weight: bold; }
+
+#links .grey-box { background: #505350; padding: 1em; margin-bottom: 20px; }
+#links .red-box { background: #e9292f; padding: 1em; margin-bottom: 20px; }
+#links .grey-box h2,
+#links .red-box h2 { color: #fff; text-transform: uppercase; padding-bottom: 0; }
+#links .grey-box p,
+#links .red-box p { color: #fff; padding-bottom: 0; padding-top: 12px; }
+#links .grey-box p strong,
+#links .red-box p strong { font-weight: bold; }
+#links .grey-box p a,
+#links .red-box p a { color: #fff; font-weight: bold; }
 
 /* product page */
 
@@ -191,8 +202,9 @@ body.content-blur #main { /*-webkit-filter: blur(3px);*/ }
 
 footer p { }
 
-footer ol { overflow: hidden; float: right; width: 65%; padding-top: 10px; }
+footer ol { overflow: hidden; float: right; width: 69%; padding-top: 10px; }
 footer ol > li { float: left; width: 16%; }
+footer ol > li > a { font-size: 0.9em; text-transform: uppercase; }
 footer ol div a { font-size: 0.8em; }
 
 /* ---------------- */

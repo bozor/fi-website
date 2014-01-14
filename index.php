@@ -44,10 +44,19 @@
 						</div>
 					</section>
 					<section id="links">
-						<div>
+						<!--<div>
 							<ul>
 								<li><a href="#">A link</a></li>
 							</ul>
+						</div>-->
+						<div class="grey-box">
+							<h2>Ex-demo equipment for sale</h2>
+							<p><a href="#">Click here for more information</a></p>
+						</div>
+						<div class="red-box">
+							<h2>Latest news</h2>
+							<p><strong>06.01.2014:</strong> Fianium Ship 1000th Supercontinuum Fiber Laser.</p>
+							<p><a href="#">Read more</a></p>
 						</div>
 					</section>
 				</div>

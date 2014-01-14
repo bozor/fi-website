@@ -495,7 +495,7 @@ $(function (){
 	Events.openCookieOverlay();
 
 	//$('#splash .splash-title, #splash .splash-cta').fitText();
-	$('h1,h2').fitText();
+	//$('h1,h2').fitText(1.5);
 	if ('ontouchstart' in window) {
 		$('html').addClass('touch');
 		Map.defaultZoom = 1;
