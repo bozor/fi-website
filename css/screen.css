@@ -40,11 +40,16 @@ h2 span { font-family: 'dincond-boldbold'; }
 h3 { color: #666766; font-family: 'dincond-boldbold'; font-size: 1.4em; letter-spacing: -0.05em; padding-bottom: 15px; }
 h3 span { color: #e9292f; }
 
+<<<<<<< HEAD
 p { font-family: 'Source Sans Pro', sans-serif; color: #414042; font-size: 0.85em; line-height: 1.5em; padding-bottom: 15px; }
 p.large { font-size: 1.05em; line-height: 1.4em; }
 p a { color: #e9292f; }
 p strong { font-weight: bold; }
 p em { font-style: italic; }
+=======
+p { color: #414042; font-size: 0.9em; line-height: 1.5em; padding-bottom: 15px; }
+p.large { font-size: 1.15em; line-height: 1.3em; }
+>>>>>>> da88575c12c8d7e0837dc9ca2f56a4129e29dd8d
 
 /* ---------------- */
 /* Main Layout */
