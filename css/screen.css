@@ -38,7 +38,7 @@ h1 { color: #414042; /*color: #e82c2e;*/ font-family: 'dincond-boldbold'; font-s
 h2 { color: #414042; font-family: 'dincond-regularregular'; font-size: 1.8em; letter-spacing: -0.05em; padding-bottom: 15px; }
 h2 span { font-family: 'dincond-boldbold'; }
 
-p { font-family: 'Source Sans Pro', sans-serif; color: #414042; font-size: 0.9em; line-height: 1.5em; padding-bottom: 15px; }
+p { color: #414042; font-size: 0.9em; line-height: 1.5em; padding-bottom: 15px; }
 p.large { font-size: 1.15em; line-height: 1.3em; }
 
 /* ---------------- */
@@ -269,9 +269,6 @@ footer ol div a { font-size: 0.8em; }
 }
 
 @media only screen and (max-width: 767px) {
-
-	h1 { font-size: 2em; }
-	h2 { font-size: 1.25em; }
 
 	/* Main Layout */
 	
