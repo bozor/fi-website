@@ -14,19 +14,31 @@
 	<?php include("includes/header.php") ?>
 	
 	<article id="main">
-		<div id="wrapper">
-			<section id="splash">
-				<a href="">
-					<img src="images/splash/home.png" />
-					<!--<span>
+		<section id="splash">
+			<div class="splash-inner">
+				<img src="images/splash/home.jpg" />
+				<!--<a href="">
+					
+					<span>
 						<span class="splash-title">
 							<strong>Fianium</strong>
 							<span>Worldwide Supplier of<br/>Ultrafast Fiber Lasers</span>
 						</span>
 						<span class="splash-cta">Discover our product range &rsaquo;
-					</span>-->
-				</a>
-			</section>
+					</span>
+				</a>-->
+			</div>
+			<div class="splash-bottom">
+				<div class="splash-inner">
+					<div>
+						<strong>Fianium</strong>
+						<span>Worldwide Supplier of<br/>Ultrafast Fiber Lasers</span>
+					</div>
+					<a class="splash-cta">Discover our product range &rsaquo;</a>
+				</div>
+			</div>
+		</section>
+		<div id="wrapper">
 			<div class="col-3">
 				<section id="content">
 					<h1>Welcome to Fianium - ultrafast fiber lasers</h1>

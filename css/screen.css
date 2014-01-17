@@ -40,22 +40,17 @@ h2 span { font-family: 'dincond-boldbold'; }
 h3 { color: #666766; font-family: 'dincond-boldbold'; font-size: 1.4em; letter-spacing: -0.05em; padding-bottom: 15px; }
 h3 span { color: #e9292f; }
 
-<<<<<<< HEAD
-p { font-family: 'Source Sans Pro', sans-serif; color: #414042; font-size: 0.85em; line-height: 1.5em; padding-bottom: 15px; }
+p { color: #414042; font-size: 0.85em; line-height: 1.5em; padding-bottom: 15px; }
 p.large { font-size: 1.05em; line-height: 1.4em; }
 p a { color: #e9292f; }
 p strong { font-weight: bold; }
 p em { font-style: italic; }
-=======
-p { color: #414042; font-size: 0.9em; line-height: 1.5em; padding-bottom: 15px; }
-p.large { font-size: 1.15em; line-height: 1.3em; }
->>>>>>> da88575c12c8d7e0837dc9ca2f56a4129e29dd8d
 
 /* ---------------- */
 /* Main Layout */
 
 header { padding: 0 10px; -webkit-transition: 1000ms all ease; -moz-transition: 1000ms all ease; -o-transition: 1000ms all ease; -ms-transition: 1000ms all ease; transition: 1000ms all ease; }
-footer { padding: 0 10px; -webkit-transition: 1000ms all ease; -moz-transition: 1000ms all ease; -o-transition: 1000ms all ease; -ms-transition: 1000ms all ease; transition: 1000ms all ease; }
+footer { padding: 0 10px; -webkit-transition: 1000ms all ease; -moz-transition: 1000ms all ease; -o-transition: 1000ms all ease; -ms-transition: 1000ms all ease; transition: 1000ms all ease; background: url(../images/special-bg-light-grey.jpg) center center no-repeat; }
 
 header > div,
 article > div,
@@ -66,6 +61,9 @@ footer > div { padding: 20px 0px; overflow: hidden; border-top: 1px solid #e8e8e
 
 #main { padding: 20px 0; -webkit-transition: 1000ms all ease; -moz-transition: 1000ms all ease; -o-transition: 1000ms all ease; -ms-transition: 1000ms all ease; transition: 1000ms all ease; }
 #wrapper { overflow: hidden; }
+
+.splash-bottom { background: url(../images/special-bg-red.jpg) center center no-repeat #e9292f; padding: 10px 0; }
+.splash-inner { position: relative; max-width: 1160px; margin: 0 auto; padding: 0 10px; }
 
 /*#splash { background: rgba(140,0,0,0.3); }
 #links { background: rgba(0,190,0,0.3); }
@@ -86,7 +84,7 @@ footer > div { padding: 20px 0px; overflow: hidden; border-top: 1px solid #e8e8e
 .col-2 #content { width: 74%; }
 .col-2 #links { width: 26%; }
 
-#splash > img,
+#splash > div > img,
 #splash > a > img { max-width: 100%; height: auto; display: block; border: 0; }
 #splash > a { position: relative; max-width: 100%; height: auto; display: block; }
 #splash > a > span { position: absolute; padding: 1.5em 1.5em 1.5em 0; top: 0; right: 0; width: 33%; height: 100%; text-align: right; display: block; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -95,15 +93,20 @@ footer > div { padding: 20px 0px; overflow: hidden; border-top: 1px solid #e8e8e
 #splash > a .splash-title > span { font-family: 'dincond-regularregular'; /*font-size: 2.8em;*/ font-size: 1.45em; opacity: 0.65; letter-spacing: -0.05em; }
 #splash > a .splash-cta { display: block; position: absolute; bottom: 1.5em; right: 1.5em; font-size: 1.8em; font-family: 'dincond-regularregular'; /*font-size: 1.6em;*/ color: #fff; text-decoration: underline; }
 
-#other .latest-tweets { background: #5ea9dd; padding: 1em; margin-bottom: 20px; }
+#splash .splash-bottom div { color: #fff; overflow: hidden; }
+#splash .splash-bottom div strong { float: left; display: inline-block; font-family: 'dincond-boldbold'; font-size: 6em; text-transform: uppercase; letter-spacing: -0.05em; }
+#splash .splash-bottom div span { float: left; font-family: 'dincond-regularregular'; font-size: 2.8em; opacity: 0.65; letter-spacing: -0.05em; padding-left: 2em;  }
+#splash .splash-bottom a { position: absolute; right: 0; bottom: 20px; color: #fff; }
+
+#other .latest-tweets { background: url(../images/special-bg-blue.jpg) center center no-repeat #5ea9dd; padding: 1em; margin-bottom: 20px; border-radius: 4px; }
 #other .latest-tweets h2 { color: #fff; text-transform: uppercase; padding-bottom: 8px; }
 #other .latest-tweets .tweet_list { font-family: 'Source Sans Pro', sans-serif; color: #fff; font-size: 0.85em; line-height: 1.5em; }
 #other .latest-tweets .tweet_list a { color: #fff; }
 #other .latest-tweets p { padding-bottom: 0; padding-top: 12px; }
 #other .latest-tweets p a { color: #fff; font-weight: bold; }
 
-#links .grey-box { background: #505350; padding: 1em; margin-bottom: 20px; }
-#links .red-box { background: #e9292f; padding: 1em; margin-bottom: 20px; }
+#links .grey-box { background: url(../images/special-bg-dark-grey.jpg) top center no-repeat #505350; padding: 1em; margin-bottom: 20px; border-radius: 4px; }
+#links .red-box { background: url(../images/special-bg-red.jpg) left center no-repeat #e9292f; padding: 1em; margin-bottom: 20px; border-radius: 4px; }
 #links .grey-box h2,
 #links .red-box h2 { color: #fff; text-transform: uppercase; padding-bottom: 0; }
 #links .grey-box p,
@@ -226,6 +229,12 @@ footer ol div a { font-size: 0.8em; }
 	#logo { -webkit-background-size: 960px 600px; }
 
 	#logo { background-position: -480px 0; }
+	
+	footer,
+	#links .grey-box,
+	#links .red-box,
+	#other .latest-tweets, 
+	.splash-bottom { -webkit-background-size: 960px 300px; }
 }
 
 @media only screen and (min-width: 1176px) {
