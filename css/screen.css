@@ -62,7 +62,7 @@ footer > div { padding: 20px 0px; overflow: hidden; border-top: 1px solid #e8e8e
 #main { padding: 20px 0; -webkit-transition: 1000ms all ease; -moz-transition: 1000ms all ease; -o-transition: 1000ms all ease; -ms-transition: 1000ms all ease; transition: 1000ms all ease; }
 #wrapper { overflow: hidden; }
 
-.splash-bottom { background: url(../images/special-bg-red.jpg) center center no-repeat #e9292f; padding: 10px 0; }
+.splash-bottom { background: url(../images/special-bg-red.jpg) center center no-repeat #e9292f; padding: 15px 0; }
 .splash-inner { position: relative; max-width: 1160px; margin: 0 auto; padding: 0 10px; }
 
 /*#splash { background: rgba(140,0,0,0.3); }
@@ -93,10 +93,10 @@ footer > div { padding: 20px 0px; overflow: hidden; border-top: 1px solid #e8e8e
 #splash > a .splash-title > span { font-family: 'dincond-regularregular'; /*font-size: 2.8em;*/ font-size: 1.45em; opacity: 0.65; letter-spacing: -0.05em; }
 #splash > a .splash-cta { display: block; position: absolute; bottom: 1.5em; right: 1.5em; font-size: 1.8em; font-family: 'dincond-regularregular'; /*font-size: 1.6em;*/ color: #fff; text-decoration: underline; }
 
-#splash .splash-bottom div { color: #fff; overflow: hidden; }
-#splash .splash-bottom div strong { float: left; display: inline-block; font-family: 'dincond-boldbold'; font-size: 6em; text-transform: uppercase; letter-spacing: -0.05em; }
-#splash .splash-bottom div span { float: left; font-family: 'dincond-regularregular'; font-size: 2.8em; opacity: 0.65; letter-spacing: -0.05em; padding-left: 2em;  }
-#splash .splash-bottom a { position: absolute; right: 0; bottom: 20px; color: #fff; }
+#splash .splash-bottom a { display: block; color: #fff; overflow: hidden; }
+#splash .splash-bottom a strong { display: inline-block; font-family: 'dincond-boldbold'; font-size: 6em; text-transform: uppercase; letter-spacing: -0.05em; vertical-align: middle; }
+#splash .splash-bottom a span { display: inline-block; font-family: 'dincond-regularregular'; font-size: 2.8em; opacity: 0.65; letter-spacing: -0.05em; padding-left: 2em; vertical-align: middle; }
+#splash .splash-bottom span { position: absolute; right: 10px; bottom: 0px; color: #fff; }
 
 #other .latest-tweets { background: url(../images/special-bg-blue.jpg) center center no-repeat #5ea9dd; padding: 1em; margin-bottom: 20px; border-radius: 4px; }
 #other .latest-tweets h2 { color: #fff; text-transform: uppercase; padding-bottom: 8px; }

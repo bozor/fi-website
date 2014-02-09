@@ -30,11 +30,11 @@
 			</div>
 			<div class="splash-bottom">
 				<div class="splash-inner">
-					<div>
+					<a href="#">
 						<strong>Fianium</strong>
 						<span>Worldwide Supplier of<br/>Ultrafast Fiber Lasers</span>
-					</div>
-					<a class="splash-cta">Discover our product range &rsaquo;</a>
+					</a>
+					<span class="splash-cta">Discover our product range &rsaquo;</span>
 				</div>
 			</div>
 		</section>
