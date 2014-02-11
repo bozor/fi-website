@@ -32,7 +32,7 @@
 				<div class="splash-inner">
 					<a href="#">
 						<strong>Fianium</strong>
-						<span>Worldwide Supplier of<br/>Ultrafast Fiber Lasers</span>
+						<span>Worldwide Supplier of Ultrafast Fiber Lasers</span>
 					</a>
 					<span class="splash-cta">Discover our product range &rsaquo;</span>
 				</div>

@@ -34,13 +34,13 @@ a:hover { text-decoration: none; }
     font-style: normal;
 }
 
-h1 { color: #414042; /*color: #e82c2e;*/ font-family: 'dincond-boldbold'; font-size: 2.9em; line-height: 1em; letter-spacing: -0.05em; padding-bottom: 15px; }
-h2 { color: #414042; font-family: 'dincond-regularregular'; font-size: 1.8em; letter-spacing: -0.05em; padding-bottom: 15px; text-transform: uppercase; }
+h1 { color: #414042; /*color: #e82c2e;*/ font-family: 'dincond-boldbold'; font-size: 2.9em; line-height: 1em; letter-spacing: -0.05em; padding-bottom: 0.3em; }
+h2 { color: #414042; font-family: 'dincond-regularregular'; font-size: 1.8em; letter-spacing: -0.05em; padding-bottom: 0.3em; text-transform: uppercase; }
 h2 span { font-family: 'dincond-boldbold'; }
-h3 { color: #666766; font-family: 'dincond-boldbold'; font-size: 1.4em; letter-spacing: -0.05em; padding-bottom: 15px; }
+h3 { color: #666766; font-family: 'dincond-boldbold'; font-size: 1.4em; letter-spacing: -0.05em; padding-bottom: 0.3em; }
 h3 span { color: #e9292f; }
 
-p { color: #414042; font-size: 0.85em; line-height: 1.5em; padding-bottom: 15px; }
+p { color: #414042; font-size: 0.85em; line-height: 1.5em; padding-bottom: 0.75em; }
 p.large { font-size: 1.05em; line-height: 1.4em; }
 p a { color: #e9292f; }
 p strong { font-weight: bold; }
@@ -93,28 +93,31 @@ footer > div { padding: 20px 0px; overflow: hidden; border-top: 1px solid #e8e8e
 #splash > a .splash-title > span { font-family: 'dincond-regularregular'; /*font-size: 2.8em;*/ font-size: 1.45em; opacity: 0.65; letter-spacing: -0.05em; }
 #splash > a .splash-cta { display: block; position: absolute; bottom: 1.5em; right: 1.5em; font-size: 1.8em; font-family: 'dincond-regularregular'; /*font-size: 1.6em;*/ color: #fff; text-decoration: underline; }
 
-#splash .splash-bottom a { display: block; color: #fff; overflow: hidden; }
-#splash .splash-bottom a strong { display: inline-block; font-family: 'dincond-boldbold'; font-size: 6em; text-transform: uppercase; letter-spacing: -0.05em; vertical-align: middle; }
-#splash .splash-bottom a span { display: inline-block; font-family: 'dincond-regularregular'; font-size: 2.8em; opacity: 0.65; letter-spacing: -0.05em; padding-left: 2em; vertical-align: middle; }
-#splash .splash-bottom span { position: absolute; right: 10px; bottom: 0px; color: #fff; }
+#splash .splash-bottom a { position: relative; display: block; color: #fff; overflow: hidden; z-index: 10; text-decoration: none; }
+#splash .splash-bottom a strong { display: inline-block; font-family: 'dincond-boldbold'; font-size: 6em; line-height: 1em; text-transform: uppercase; letter-spacing: -0.05em; vertical-align: middle; }
+#splash .splash-bottom a span { display: inline-block; font-family: 'dincond-regularregular'; font-size: 2.8em; line-height: 1em; max-width: 330px; opacity: 0.65; letter-spacing: -0.05em; padding-left: 0.75em; vertical-align: middle; }
+#splash .splash-bottom > .splash-inner > span { position: absolute; right: 10px; bottom: 0px; color: #fff; }
 
 #other .latest-tweets { background: url(../images/special-bg-blue.jpg) center center no-repeat #5ea9dd; padding: 1em; margin-bottom: 20px; border-radius: 4px; }
-#other .latest-tweets h2 { color: #fff; text-transform: uppercase; padding-bottom: 8px; }
+#other .latest-tweets h2 { color: #fff; text-transform: uppercase; }
 #other .latest-tweets .tweet_list { font-family: 'Source Sans Pro', sans-serif; color: #fff; font-size: 0.85em; line-height: 1.5em; }
 #other .latest-tweets .tweet_list a { color: #fff; }
-#other .latest-tweets p { padding-bottom: 0; padding-top: 12px; }
+#other .latest-tweets p { padding-bottom: 0; }
 #other .latest-tweets p a { color: #fff; font-weight: bold; }
+#other .latest-tweets p:last-child { padding-top: 0.75em; }
 
 #links .grey-box { background: url(../images/special-bg-dark-grey.jpg) top center no-repeat #505350; padding: 1em; margin-bottom: 20px; border-radius: 4px; }
 #links .red-box { background: url(../images/special-bg-red.jpg) left center no-repeat #e9292f; padding: 1em; margin-bottom: 20px; border-radius: 4px; }
 #links .grey-box h2,
-#links .red-box h2 { color: #fff; text-transform: uppercase; padding-bottom: 0; }
+#links .red-box h2 { color: #fff; text-transform: uppercase; }
 #links .grey-box p,
-#links .red-box p { color: #fff; padding-bottom: 0; padding-top: 12px; }
+#links .red-box p { color: #fff; padding-bottom: 0; }
 #links .grey-box p strong,
 #links .red-box p strong { font-weight: bold; }
 #links .grey-box p a,
 #links .red-box p a { color: #fff; font-weight: bold; }
+#links .grey-box p:last-child,
+#links .red-box p:last-child { padding-top: 0.75em; }
 
 /* product page */
 
@@ -159,15 +162,6 @@ body.content-blur #main { /*-webkit-filter: blur(3px);*/ }
 #nav > li > a.sub-menu-open { background: #454545; color: #e8e8e8; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; border-radius: 4px 4px 0 0; padding-bottom: 16px; }
 #nav > li > div { position: absolute; right: 0; display: table-row; overflow: hidden; width: 200px; height: 0; border-radius: 4px 0 4px 4px; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; }
 #nav > li > div.sub-menu-open { display: block; height: auto; background: #454545; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; }
-/*#nav > li.active > a, 
-#nav > li.active:hover > a,
-#nav > li:hover > a { background: #454545; color: #e8e8e8; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; border-radius: 4px 4px 0 0; padding-bottom: 16px; }
-#nav > li#nav-home.active > a,
-#nav > li#nav-home:hover > a { border-radius: 4px; padding-bottom: 6px; }
-#nav > li.active > a { border-radius: 4px; padding-bottom: 6px; }
-#nav > li > div { position: absolute; right: 0; display: table-row; overflow: hidden; width: 180px; height: 0; border-radius: 4px 0 4px 4px; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; }
-#nav > li:hover > div,
-#nav > li > div:hover { height: auto; background: #454545; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; }*/
 #nav > li > a.sub-menu > i { position: absolute; top: 14px; right: 11px; display: block; width: 0; height: 0; border-left: 3px solid transparent; border-right: 3px solid transparent; border-top: 6px solid #656565; -webkit-transition: 350ms all ease; -moz-transition: 350ms all ease; -o-transition: 350ms all ease; -ms-transition: 350ms all ease; transition: 350ms all ease; }
 #nav > li > a.sub-menu-open > i { transform: rotate(180deg); -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); border-top-color: #e8e8e8; }
 
@@ -183,10 +177,10 @@ body.content-blur #main { /*-webkit-filter: blur(3px);*/ }
 	
 .touch #nav { position: relative; right: 0; overflow: hidden; max-height: 0; clear: both; border-radius: 4px; padding: 0; background: #454545; }
 .touch #nav.hidden { max-height: 0; -webkit-transition: 500ms all ease; -moz-transition: 500ms all ease; -o-transition: 500ms all ease; -ms-transition: 500ms all ease; transition: 500ms all ease; }
-.touch #nav.visible { max-height: 999px; -webkit-transition: 500ms all ease; -moz-transition: 500ms all ease; -o-transition: 500ms all ease; -ms-transition: 500ms all ease; transition: 500ms all ease; }
+.touch #nav.visible { max-height: 999px; -webkit-transition: 500ms all ease; -moz-transition: 500ms all ease; -o-transition: 500ms all ease; -ms-transition: 500ms all ease; transition: 500ms all ease; z-index: 20; }
 	
 .touch #nav > li { float: none; margin-right: 0; border-bottom: 1px solid #656565; }
-.touch #nav > li > div { display: block; position: relative; width: 100%; background: #333; max-height: 0; height: auto; right: auto; padding-top: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 0; -webkit-transition: 350ms all ease; -moz-transition: 350ms all ease; -o-transition: 350ms all ease; -ms-transition: 350ms all ease; transition: 350ms all ease; }
+.touch #nav > li > div { display: block; position: relative; width: 100%; background: #333; max-height: 0; height: auto; right: auto; padding-top: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 0; -webkit-transition: 350ms all ease; -moz-transition: 350ms all ease; -o-transition: 350ms all ease; -ms-transition: 350ms all ease; transition: 350ms all ease; z-index: 20; }
 .touch #nav > li > a { display: block; background: transparent; -webkit-transition: 200ms all ease; -moz-transition: 200ms all ease; -o-transition: 200ms all ease; -ms-transition: 200ms all ease; transition: 200ms all ease; padding: 10px 16px 9px; color: #989f98; text-decoration: underline; text-decoration: none; text-transform: uppercase; }
 .touch #nav > li > a:active { background: #565656; }
 .touch #nav > li > a.sub-menu-open { color: #e8e8e8; /*background: #333;*/ } 
@@ -276,26 +270,36 @@ footer ol div a { font-size: 0.8em; }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 
+	html { font-size: 0.9em; }
+
 	/* Main Layout */
 	
 	.col-3 #content,
 	.col-2 #content { width: 65%; }
 	#narrow { float: left; width: 35%; }
 	.col-2 #links { width: 35%; }
+
+	/* splash */
+
+	#splash .splash-bottom a { padding-bottom: 15px; }
+	#splash .splash-bottom a strong { display: block; }
+	#splash .splash-bottom a span { display: block; padding: 0 0 5px; max-width: 100%; }
+	#splash .splash-bottom > .splash-inner > span  { right: auto; left: 10px; }
 	
-	/*#splash > a > .splash-title { font-size: 0.5em; }
-	#splash > a > .splash-cta { font-size: 0.8em; }*/
 }
 
 @media only screen and (max-width: 767px) {
 
+	html { font-size: 0.7em; }
+
 	/* Main Layout */
 	
 	header > div { padding: 10px 0; }
-	footer > div { padding: 0 0 10px; }
+	footer > div { padding: 10px 0 10px; }
 
-	#main { padding: 10px 0; }
-
+	#main { padding: 10px 0 0; }
+	#splash { padding-bottom: 10px; }
+	
 	#links,
 	#content,
 	#other { float: none; width: 100%; padding: 0; }
@@ -304,26 +308,26 @@ footer ol div a { font-size: 0.8em; }
 	.col-2 #content,
 	.col-3 #links,
 	.col-3 #content,
-	.col-3 #other { float: none; width: 100%; }
-	
-	/*#splash > a > .splash-title { font-size: 0.6em; }
-	#splash > a > .splash-cta { font-size: 0.6em; }*/
+	.col-3 #other { float: none; width: 100%; margin-bottom: 1em; }
+
+	.col-2 #content,
+	.col-3 #content { border-bottom: 1px solid #e8e8e8; margin-bottom: 1em; }
 	
 	/* maps */
 	
-	#map { height: 200px; }
+	#map { height: 200px; position: relative; clear: both; }
 	
 	/* Header */
 	
-	#main { position: relative; clear: both; }
+	/* splash */
+
+	#splash .splash-bottom a { padding-bottom: 15px; }
+	#splash .splash-bottom a strong { display: block; }
+	#splash .splash-bottom a span { display: block; padding: 0 0 5px; max-width: 100%; }
+	#splash .splash-bottom > .splash-inner > span  { right: auto; left: 10px; }
 	
 	/* Footer */
+	
 	#footer-text { float: none; width: 100%; }
 	footer ol { display: none; }
-}
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-
-	/* Header */
-
 }
