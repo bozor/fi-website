@@ -1,10 +1,10 @@
 <footer>
 		<div class="content">
 			<div id="footer-text">
-				<p><a id="back-to-top">Top</a></p>
 				<p id="copyright">&copy; Copyright 2003-2014 Fianium Ltd.</p>
 				<p id="footer-address">Fianium Ltd, 20 Compass Point, Ensign Way, Southampton, SO31 4RA<br/>Company Reg. No: 4645475</p>
 				<p><a href="#" class="show-set-industry">Change your industry</a></p>
+				<p><a id="back-to-top">Back to top</a></p>
 			</div>
 			<ol>
 				<li><a href="index.htm">Home</a></li>

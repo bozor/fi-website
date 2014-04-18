@@ -1,7 +1,7 @@
 <header id="top">
 		<div class="content">
 			<div id="header-overlay">
-				<a href="#" id="logo">logo</a>
+				<a href="index.htm" id="logo">logo</a>
 				
 				<span id="mobile-menu">
 					<span class="bar"></span>
