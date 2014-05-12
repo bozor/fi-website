@@ -15,7 +15,7 @@
 					<a href="#" class="sub-menu">Company<i></i></a>
 					<div>
 						<ul>
-							<li><a href="map.htm">About us</a></li>
+							<li><a href="#">About us</a></li>
 							<li><a href="#">Management</a></li>
 							<li><a href="#">Careers</a></li>
 						</ul>
@@ -25,8 +25,9 @@
 					<a href="#" class="sub-menu">Products<i></i></a>
 					<div>
 						<ul>
-							<li><a href="contact-form.htm" >Introduction</a></li>
+							<li><a href="#">Introduction</a></li>
 							<li><a href="#">Supercontinuum sources</a></li>
+							<li><a href="#">Tunable filters</a></li>
 							<li><a href="#">FemtoPower fiber lasers</a></li>
 							<li><a href="#">HE high-energy fiber lasers</a></li>
 							<li><a href="#">ALP (advanced laser platform)</a></li>
@@ -59,9 +60,9 @@
 					<a href="#" class="sub-menu">Contact Us<i></i></a>
 					<div>
 						<ul>
-							<li><a href="#">Fianium offices</a></li>
+							<li><a href="map.htm">Fianium offices</a></li>
 							<li><a href="#">Sales contacts</a></li>
-							<li><a href="#">Contact form</a></li>
+							<li><a href="contact-form.htm">Contact form</a></li>
 						</ul>
 					</div>
 				</li>

@@ -2,9 +2,8 @@
 		<div class="content">
 			<div id="footer-text">
 				<p id="copyright">&copy; Copyright 2003-2014 Fianium Ltd.</p>
-				<p id="footer-address">Fianium Ltd, 20 Compass Point, Ensign Way, Southampton, SO31 4RA<br/>Company Reg. No: 4645475</p>
-				<p><a href="#" class="show-set-industry">Change your industry</a></p>
-				<p><a id="back-to-top">Back to top</a></p>
+				<p id="footer-address"><strong>Address:</strong> Fianium Ltd, 20 Compass Point, Ensign Way, Southampton, SO31 4RA. <strong>Company Reg. No:</strong> 4645475</p>
+				<p><a href="#" class="show-set-industry">Change your industry</a> <a id="back-to-top">Back to top</a></p>
 			</div>
 			<ol>
 				<li><a href="index.htm">Home</a></li>
@@ -24,6 +23,7 @@
 						<ul>
 							<li><a href="#">Introduction</a></li>
 							<li><a href="#">Supercontinuum sources</a></li>
+							<li><a href="#">Tunable filters</a></li>
 							<li><a href="#">FemtoPower fiber lasers</a></li>
 							<li><a href="#">HE high-energy fiber lasers</a></li>
 							<li><a href="#">ALP (advanced laser platform)</a></li>
