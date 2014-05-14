@@ -1,8 +1,8 @@
 <footer>
 		<div class="content">
 			<div id="footer-text">
-				<p id="copyright">&copy; Copyright 2003-2014 Fianium Ltd.</p>
-				<p id="footer-address"><strong>Address:</strong> Fianium Ltd, 20 Compass Point, Ensign Way, Southampton, SO31 4RA. <strong>Company Reg. No:</strong> 4645475</p>
+				<p id="copyright">&copy; Copyright 2003-2014 Temporary Ltd.</p>
+				<p id="footer-address"><strong>Address:</strong> Temporary Ltd, 20 Compass Point, Ensign Way, Southampton, SO31 4RA. <strong>Company Reg. No:</strong> 4645475</p>
 				<p><a href="#" class="show-set-industry">Change your industry</a> <a id="back-to-top">Back to top</a></p>
 			</div>
 			<ol>
@@ -56,7 +56,7 @@
 					<a href="#">Contact Us</a>
 					<div>
 						<ul>
-							<li><a href="#">Fianium offices</a></li>
+							<li><a href="#">Temporary offices</a></li>
 							<li><a href="#">Sales contacts</a></li>
 							<li><a href="#">Contact form</a></li>
 						</ul>

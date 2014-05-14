@@ -60,7 +60,7 @@
 					<a href="#" class="sub-menu">Contact Us<i></i></a>
 					<div>
 						<ul>
-							<li><a href="map.htm">Fianium offices</a></li>
+							<li><a href="map.htm">Temporary offices</a></li>
 							<li><a href="#">Sales contacts</a></li>
 							<li><a href="contact-form.htm">Contact form</a></li>
 						</ul>

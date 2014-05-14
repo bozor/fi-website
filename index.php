@@ -16,7 +16,7 @@
 	<article id="main">
 		<section id="splash">
 			<div class="splash-inner">
-				<img src="images/splash/home.jpg" />
+				<img src="images/splash/home-temp.jpg" />
 				<!--<a href="">
 					
 					<span>
@@ -31,8 +31,8 @@
 			<div class="splash-bottom">
 				<div class="splash-inner">
 					<a href="#">
-						<strong>Fianium</strong>
-						<span>Worldwide Supplier of Ultrafast Fiber Lasers</span>
+						<strong>Temporary</strong>
+						<span>Officia deserunt dolore fatback aute anim</span>
 					</a>
 					<span class="splash-cta">Discover our product range &rsaquo;</span>
 				</div>
@@ -41,9 +41,9 @@
 		<div id="wrapper">
 			<div class="col-2">
 				<section id="content">
-					<h1>Welcome to Fianium - ultrafast fiber lasers</h1>
-					<p class="large">Fianium is a fiber laser company focused on the manufacture and development of ultrafast, high power laser systems covering a wavelength range from 240nm to 2500nm.</p>
-					<p>Ultrafast Fiber lasers, including picosecond lasers, femtosecond lasers and Supercontinuum sources are the singular focus of Fianium. Biophotonics applications such as fluorescence microscopy, imaging and spectroscopy are the primary applications for Supercontinuum sources. Medical therapy and ultrafast material processing are some typical applications of the high power and high energy picosecond and femtosecond fiber lasers.</p>
+					<h1>T-bone in doner hamburger</h1>
+					<p class="large">Andouille esse irure pancetta, ad ut turducken ut pork loin t-bone. Deserunt sunt drumstick, prosciutto officia commodo exercitation ex in rump corned beef adipisicing.</p>
+					<p>Bacon ipsum dolor sit amet velit quis esse excepteur bresaola. Minim turducken meatball tail, strip steak hamburger in ad capicola tenderloin landjaeger turkey frankfurter. Velit laboris in labore ut pancetta meatball esse ut sed pastrami fatback pork chop. Shoulder esse id, beef ribs magna cupidatat ex do hamburger excepteur. Enim ground round landjaeger turkey sunt strip steak. Consequat esse porchetta do, dolore nulla doner bacon bresaola.</p>
 				</section>
 
 				<section id="links">
@@ -58,7 +58,7 @@
 					</div>
 					<div class="red-box">
 						<h2>Latest news</h2>
-						<p><strong>06.01.2014:</strong> Fianium Ship 1000th Supercontinuum Fiber Laser.</p>
+						<p><strong>06.01.2014:</strong> Officia deserunt dolore fatback aute anim</p>
 						<p><a href="#">Read more</a></p>
 					</div>
 				</section>

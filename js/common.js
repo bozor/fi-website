@@ -243,8 +243,7 @@ var Events = {
 		}
 	},
 	onOrientationChange: function() {
-		// reload isotope
-		//$('#nav').isotope('reLayout');
+
 	},
 	resizeHandler: function () {
 		if($(window).height() != Globals.lastWindowHeight || $(window).width() != Globals.lastWindowWidth){
@@ -331,13 +330,13 @@ var Ui = {
 	showCookieSet: function(){
 		var content = '\
 		<a href="#" class="close-cookie-overlay">x</a>\
-		<p id="cookie-set">Select your area of interest:&nbsp;&nbsp;<a href="#" id="cookie1">Industrial</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="#" id="cookie2">Scientific</a></p>'
+		<div id="cookie-set"><h2>Select your area of interest</h2><a href="#" class="industrial" id="cookie1">Interest of area</a><a href="#" class="scientific" id="cookie2">Area of interest</a></div>'
 		
 		$('body').addClass('content-blur');
 
 		$('body').prepend('<div id="industry-select-container">'+content+'</div><div id="fade"></div>');
 		$('#fade').animate({
-			opacity: 0.7
+			opacity: 0.8
 		}, 500, function(){
 			$('#industry-select-container').show();
 			Events.setCookie();
