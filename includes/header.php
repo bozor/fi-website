@@ -1,7 +1,7 @@
 <header id="top">
 		<div class="content">
 			<div id="header-overlay">
-				<a href="#" id="logo">logo</a>
+				<a href="index.htm" id="logo">logo</a>
 				
 				<span id="mobile-menu">
 					<span class="bar"></span>
@@ -12,7 +12,7 @@
 			<ol id="nav">
 				<li id="nav-home"><a href="index.htm">Home</a></li>
 				<li id="nav-about">
-					<a href="map.htm">Company</a>
+					<a href="#" class="sub-menu">Company<i></i></a>
 					<div>
 						<ul>
 							<li><a href="#">About us</a></li>
@@ -22,11 +22,12 @@
 					</div>
 				</li>
 				<li id="nav-products">
-					<a href="contact-form.htm">Products</a>
+					<a href="#" class="sub-menu">Products<i></i></a>
 					<div>
 						<ul>
 							<li><a href="#">Introduction</a></li>
 							<li><a href="#">Supercontinuum sources</a></li>
+							<li><a href="#">Tunable filters</a></li>
 							<li><a href="#">FemtoPower fiber lasers</a></li>
 							<li><a href="#">HE high-energy fiber lasers</a></li>
 							<li><a href="#">ALP (advanced laser platform)</a></li>
@@ -35,7 +36,7 @@
 					</div>
 				</li>
 				<li id="nav-application">
-					<a href="#">Applications</a>
+					<a href="#" class="sub-menu">Applications<i></i></a>
 					<div>
 						<ul>
 							<li><a href="#">Overview</a></li>
@@ -44,7 +45,7 @@
 					</div>
 				</li>
 				<li id="nav-news">
-					<a href="#">News</a>
+					<a href="#" class="sub-menu">News<i></i></a>
 					<div>
 						<ul>
 							<li><a href="#">All news</a></li>
@@ -56,12 +57,12 @@
 					</div>
 				</li>
 				<li id="nav-contact">
-					<a href="#">Contact Us</a>
+					<a href="#" class="sub-menu">Contact Us<i></i></a>
 					<div>
 						<ul>
-							<li><a href="#">Fianium offices</a></li>
+							<li><a href="map.htm">Temporary offices</a></li>
 							<li><a href="#">Sales contacts</a></li>
-							<li><a href="#">Contact form</a></li>
+							<li><a href="contact-form.htm">Contact form</a></li>
 						</ul>
 					</div>
 				</li>

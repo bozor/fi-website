@@ -97,17 +97,32 @@ var Ajax = {
 
 var Events = {
 	menu: function(){
-		$('#nav > li > div').hide();
+		//$('#nav > li > div').hide();
 
 		if($('#mobile-menu').is(':visible')){
 			$('#nav > li > div').show();
 			
-			Ui.menu.initIsotope();
+			//Ui.menu.initIsotope();
 		
 			$('#mobile-menu').click(function(e){
 				Ui.menu.toggle();
 			});
 		}
+		
+		$('.sub-menu').click(function(e){
+			e.preventDefault();
+			
+			if($(this).hasClass('sub-menu-open')){
+				$(this).removeClass('sub-menu-open');
+				$(this).next('div').removeClass('sub-menu-open')
+			} else {
+				$('.sub-menu').removeClass('sub-menu-open');
+				$(this).addClass('sub-menu-open');
+				
+				$('.sub-menu').next('div').removeClass('sub-menu-open');
+				$(this).next('div').addClass('sub-menu-open');
+			}
+		});
 		
 		FastClick.attach(document.body);
 	},
@@ -228,8 +243,7 @@ var Events = {
 		}
 	},
 	onOrientationChange: function() {
-		// reload isotope
-		$('#nav').isotope('reLayout');
+
 	},
 	resizeHandler: function () {
 		if($(window).height() != Globals.lastWindowHeight || $(window).width() != Globals.lastWindowWidth){
@@ -269,7 +283,7 @@ var Ui = {
 	twitter: function(){
 		$('.twitter').tweet({
 			modpath: 'twitter/',
-			username: 'bbcsport',
+			username: 'fianiumltd',
 			count: 1,
 			loading_text: 'loading twitter feed...',
 		});
@@ -316,13 +330,13 @@ var Ui = {
 	showCookieSet: function(){
 		var content = '\
 		<a href="#" class="close-cookie-overlay">x</a>\
-		<p id="cookie-set">Select your area of interest:&nbsp;&nbsp;<a href="#" id="cookie1">Industrial</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="#" id="cookie2">Scientific</a></p>'
+		<div id="cookie-set"><h2>Select your area of interest</h2><a href="#" class="industrial" id="cookie1">Interest of area</a><a href="#" class="scientific" id="cookie2">Area of interest</a></div>'
 		
 		$('body').addClass('content-blur');
 
 		$('body').prepend('<div id="industry-select-container">'+content+'</div><div id="fade"></div>');
 		$('#fade').animate({
-			opacity: 0.7
+			opacity: 0.8
 		}, 500, function(){
 			$('#industry-select-container').show();
 			Events.setCookie();
@@ -478,14 +492,17 @@ var Cookies = {
 $(function (){
 	Cookies.showContent();
 	Events.openCookieOverlay();
-	
+
+	//$('#splash .splash-title, #splash .splash-cta').fitText();
+	//$('h1,h2').fitText(1.5);
 	if ('ontouchstart' in window) {
 		$('html').addClass('touch');
-		Events.menu();
 		Map.defaultZoom = 1;
 
 		window.addEventListener('orientationchange', Events.onOrientationChange);
 	}
+	
+	Events.menu();
 	
 	$('#back-to-top').click(function(e){
 		$.scrollTo(0, 250);
