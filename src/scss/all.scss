@@ -1,0 +1,7 @@
+@import "bourbon";
+
+html { 
+    background: red;
+    
+    h1 { color: green; @include transition(250ms all); } 
+}

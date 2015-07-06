@@ -1,0 +1,11 @@
+html {
+  background: red;
+}
+html h1 {
+  color: green;
+  -webkit-transition: 250ms all;
+  -moz-transition: 250ms all;
+  transition: 250ms all;
+}
+
+/*# sourceMappingURL=all.css.map */
