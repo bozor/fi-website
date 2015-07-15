@@ -45,8 +45,8 @@ if (!Array.prototype.indexOf) {
 
 // https://gist.github.com/500145
 jQuery.fn.quickEach = (function(){
-    
     var jq = jQuery([1]);
+    
     return function(c) {
 	
         var i = -1, el, len = this.length;
@@ -126,20 +126,6 @@ var Events = {
 		
 		FastClick.attach(document.body);
 	},
-	setCookie: function(){
-		$('body').on('click', '#cookie-set a', function(e){
-			e.preventDefault();
-			Cookies.set($(this).attr('id'));
-			Cookies.showContent();
-			Ui.closeCookieSet();
-		});
-	},
-	closeCookieOverlay: function() {
-		$('body').on('click', '.close-cookie-overlay', function(e){
-			e.preventDefault();
-			Ui.closeCookieSet();
-		});
-	},
 	contactForm: {
 		init: function(){
 			$('#contact_form select').change(function() {
@@ -214,13 +200,7 @@ var Events = {
 				}
 			});
 		}
-	},
-	openCookieOverlay: function(){
-		$('.show-set-industry').click(function(e){
-			e.preventDefault();
-			Ui.showCookieSet();
-		});
-	},
+	}
 	enquire: {
 		map: function(){
 			enquire.register('screen and (max-width:480px)', function(){
@@ -326,29 +306,6 @@ var Ui = {
 				}
 			});
 		}
-	},
-	showCookieSet: function(){
-		var content = '\
-		<a href="#" class="close-cookie-overlay">x</a>\
-		<div id="cookie-set"><h2>Select your area of interest</h2><a href="#" class="industrial" id="cookie1">Interest of area</a><a href="#" class="scientific" id="cookie2">Area of interest</a></div>'
-		
-		$('body').addClass('content-blur');
-
-		$('body').prepend('<div id="industry-select-container">'+content+'</div><div id="fade"></div>');
-		$('#fade').animate({
-			opacity: 0.8
-		}, 500, function(){
-			$('#industry-select-container').show();
-			Events.setCookie();
-			Events.closeCookieOverlay();
-		});
-	},
-	closeCookieSet: function(){
-		$('#fade').fadeOut(350);
-		$('#industry-select-container').fadeOut(350, function(){
-			$('#fade, #industry-select-container').remove();
-		});
-		$('body').removeClass('content-blur');
 	}
 }
 
@@ -463,9 +420,6 @@ var Cookies = {
 		
 		$.cookie('f_site_cookie_content', cookieVal, { expires: 365, path: '/' });
 	},
-	/*initialSet: function(){
-		Ui.showCookieSet();
-	},*/
 	showContent: function(){
 		$('body').removeAttr('class');
 		switch($.cookie('f_site_cookie_content')){
@@ -493,8 +447,6 @@ $(function (){
 	Cookies.showContent();
 	Events.openCookieOverlay();
 
-	//$('#splash .splash-title, #splash .splash-cta').fitText();
-	//$('h1,h2').fitText(1.5);
 	if ('ontouchstart' in window) {
 		$('html').addClass('touch');
 		Map.defaultZoom = 1;

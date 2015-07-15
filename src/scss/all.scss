@@ -1,7 +1,7 @@
-@import "bourbon";
+@import "third-party/normalize";
 
-html { 
-    background: red;
-    
-    h1 { color: green; @include transition(250ms all); } 
-}
+@import "fianium/setup";
+@import "fianium/layout";
+@import "fianium/header";
+@import "fianium/footer";
+@import "fianium/content";

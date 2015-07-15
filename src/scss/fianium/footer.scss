@@ -1,0 +1,21 @@
+@import "values";
+
+.nav-footer { 
+    list-style: none; padding: 0; margin: 0;
+    
+    & > li { @include span-columns(3); }
+    
+    .section-title { text-transform: lowercase; color: $default-text-medium; font-size: 1.1em; }
+    
+    ul { 
+        list-style: none; padding: 0; margin: 0; 
+        
+        li { margin-bottom: 2px; }
+        
+        a { font-size: 0.85em; }
+    }
+}
+
+.back-to-top { font-size: 0.85em; }
+
+p { @include row; }

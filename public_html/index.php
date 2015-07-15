@@ -16,9 +16,8 @@
 	<article id="main">
 		<section id="splash">
 			<div class="splash-inner">
-				<img src="images/splash/home-temp.jpg" />
+				<img src="images/splash/home.jpg" />
 				<!--<a href="">
-					
 					<span>
 						<span class="splash-title">
 							<strong>Fianium</strong>
