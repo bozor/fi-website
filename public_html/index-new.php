@@ -30,13 +30,13 @@
 		</section>
 
         <section class="home-product-range">
-            <div class="product-a">
+            <div class="product">
                 <h3>WhiteLase SuperContinuum Lasers</h3>
             </div>
-            <div class="product-b">
+            <div class="product">
                 <h3>FemtoPower Femtosecond Lasers</h3>
             </div>
-            <div class="product-c">
+            <div class="product">
                 <h3>HYLASE High-Energy Lasers</h3>
             </div>
         </section>

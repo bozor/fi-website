@@ -6,7 +6,5 @@
 .home-product-range { 
     @include outer-container;
     
-    .product-a { @include span-columns(8); }
-    .product-b { @include span-columns(8); }
-    .product-c { @include span-columns(8); }
+    & > .product { @include span-columns(8); @include omega(3n); }
 }
