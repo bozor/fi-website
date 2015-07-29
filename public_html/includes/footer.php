@@ -50,7 +50,7 @@
             <a class="back-to-top">Back to top</a>
         </section>
         
-        <p>&copy; Copyright 2003-2014 Temporary Ltd. <strong>Address:</strong> Temporary Ltd, 20 Compass Point, Ensign Way, Southampton, SO31 4RA. <strong>Company Reg. No:</strong> 4645475</p>
+        <p class="footer-copyright">&copy; Copyright 2003-2015 Fianium Ltd. <strong>Address:</strong> Fianium Ltd, 20 Compass Point, Ensign Way, Southampton, SO31 4RA. <strong>Company Reg. No:</strong> 4645475</p>
     </div>
 </footer>
 	

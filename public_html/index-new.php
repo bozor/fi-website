@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
-<title>home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <title>home</title>
 
-<?php include("includes/common.php") ?>
+    <?php include("includes/common.php") ?>
 
 </head>
 
@@ -14,6 +14,7 @@
 	<?php include("includes/header.php") ?>
 	
 	<div class="layout-main">
+        
 		<section class="layout-splash">
 			<div class="splash-inner">
 				<img src="images/splash/home.jpg" />
@@ -21,35 +22,97 @@
 			<div class="splash-bottom">
 				<div class="splash-inner">
 					<a href="#">
-						<strong>WhiteLase SC400-20</strong>
-						<span>the world's most powerful blue-enahnced supercontinuum fiber laser</span>
+						<strong class="splash-title">WhiteLase SC400-20</strong>
+						<span class="splash-subtitle">The world's most powerful blue-enahnced supercontinuum fiber laser</span>
+                        <span class="splash-cta">Find out more about SC400-20 &rsaquo;</span>
 					</a>
-					<span class="splash-cta">find out more about SC400-20 &rsaquo;</span>
 				</div>
 			</div>
 		</section>
-
-        <section class="home-product-range">
-            <div class="product">
+        
+        <section class="home-intro">
+            <p class="large">Bacon ipsum dolor amet eiusmod elit mollit ex id, flank cupidatat ut strip steak. Ground round duis lorem officia beef ea. Pastrami ribeye biltong aute. Qui sirloin pork loin sint.</p>
+            <p class="large">Labore tenderloin commodo short loin in brisket ham salami tongue andouille porchetta chicken ribeye spare ribs.</p>
+        </section>
+        
+        <section class="home-text-sections">
+            <div class="home-text-section">
+                <h3>Latest News</h3>
+                <p>
+                    <a href="">22.06.2015: New 20W Blue-enhanced Supercontinuum Fiber Laser</a>
+                </p>
+            </div>
+            <div class="home-text-section">
+                <h3>Ex-demo Equipment</h3>
+                <p>
+                    <a href="">Mollit voluptate esse ex sunt ribeye porchetta dolore commodo</a>
+                </p>
+            </div>
+            <div class="home-text-section">
+                <h3>Careers</h3>
+                <p>
+                    <a href="">Turducken et incididunt, bresaola laborum porchetta sed filet mignon pork dolore ad cupidatat in aute pork loin</a>
+                </p>
+            </div>
+        </section>
+        
+        <section class="home-products">
+            <div class="header">
+                <h2>Our Product Range</h2>
+                <a href="" class="btn-text">See our full product range in more detail &rsaquo;</a>
+            </div>
+            <div class="home-product">
                 <h3>WhiteLase SuperContinuum Lasers</h3>
+                <p>Qui sirloin pork loin sint. Pastrami kielbasa jowl tenderloin, proident porchetta biltong filet mignon ipsum irure ex minim ham.</p>
+                <a href="" class="btn-chevron"><span>Discover WhiteLase</span></a>
             </div>
-            <div class="product">
+            <div class="home-product">
                 <h3>FemtoPower Femtosecond Lasers</h3>
+                <p>Adipisicing proident in, ham hock ea ut et sunt. Swine ball tip cow prosciutto eiusmod cupidatat chuck ipsum fugiat bresaola spare ribs quis, pork loin in fatback.</p>
+                <a href="" class="btn-chevron"><span>Discover FemtoPower</span></a>
             </div>
-            <div class="product">
+            <div class="home-product">
                 <h3>HYLASE High-Energy Lasers</h3>
+                <p>Nostrud laboris duis ullamco meatball sint. T-bone exercitation tri-tip ribeye, cupidatat ham hock aute meatball.</p>
+                <a href="" class="btn-chevron"><span>Discover HYLASE</span></a>
             </div>
         </section>
 
 		<section class="layout-twitter">
 			<div class="latest-tweets">
+                <h2>Latest Tweet</h2>
 				<div class="twitter"></div>
-				<p><a href="https://twitter.com/FianiumLtd" target="_blank" class="right">Follow us on twitter</a></p>
+				<p><a href="https://twitter.com/FianiumLtd" target="_blank" class="twitter-follow right">Follow us on twitter</a></p>
 			</div>
 		</section>
+
+        <section class="home-applications">
+            <div class="header">
+                <h2>Applications</h2>
+                <a href="" class="btn-text">Read about applications for our fiber lasers &rsaquo;</a>
+            </div>
+            <div class="home-application">
+                <h3>Spectrocopy</h3>
+                <p>Do eiusmod incididunt corned beef, venison porchetta magna kevin pariatur turkey nulla ball tip exercitation salami.</p>
+            </div>
+            <div class="home-application">
+                <h3>Micro-machining</h3>
+                <p>Swine short ribs sirloin, lorem et minim cillum shoulder flank.</p>
+            </div>
+            <div class="home-application">
+                <h3>Bio-imaging</h3>
+                <p>Ribeye swine tri-tip pig consequat magna anim. Non pork chop ball tip cow sed eu commodo do shankle tempor ground round.</p>
+            </div>
+            <div class="home-application">
+                <h3>Nanophotonics</h3>
+                <p>Turducken et incididunt, bresaola laborum porchetta sed filet mignon pork dolore ad cupidatat in aute pork loin.</p>
+            </div>
+        </section>
+        
 	</div>
 	
 	<?php include("includes/footer.php") ?>
+    
 	<script type="text/javascript" src="js/jquery.tweet.min.js"></script>
 	<script type="text/javascript">
 		$(function(){

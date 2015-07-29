@@ -7,8 +7,11 @@ div,
 a,
 span { -webkit-tap-highlight-color: rgba(0,0,0,0); }
 
-a { color: $default-link; text-decoration: none; border-bottom: 1px solid rgba($default-link, 0.25); }
-a:hover { border-bottom: 1px solid rgba($default-link, 0.8); }
+a { 
+    color: $default-link; text-decoration: none; border-bottom: 1px solid rgba($default-link, 0.25); @include transition(150ms all); 
+    
+    &:hover { border-bottom: 1px solid rgba($default-link, 0.8); }
+}
 
 .left { float: left; }
 .right { float: right; }
@@ -38,10 +41,25 @@ a:hover { border-bottom: 1px solid rgba($default-link, 0.8); }
     font-style: normal;
 }
 
-h1 { }
-h2 { }
-h3 { }
+h1 { font-family: 'dincond-boldbold'; margin-top: 0; font-size: $font-size-7; }
+h2 { font-family: 'dincond-regularregular'; margin-top: 0; font-size: $font-size-6; color: $default-text; text-transform: uppercase; letter-spacing: -0.05em; }
+h3 { font-family: 'dincond-regularregular'; margin-top: 0; font-size: $font-size-5; color: $default-text; }
 h4 { }
 h5 { }
 
-p { color: $default-text; }
+p { color: $default-text; margin-top: 0; line-height: 1.5em; }
+p.medium { font-size: $font-size-3; }
+p.large { font-size: $font-size-4;  }
+
+.btn-text { font-weight: bold; letter-spacing: -0.05em; }
+.btn-chevron { 
+    background: url(../images/chevron.svg) no-repeat; font-weight: bold; background-size: 20px 20px; padding-left: 25px; border-bottom: none; letter-spacing: -0.05em;
+    
+    span { border-bottom: 1px solid rgba($default-link, 0.25); }
+    
+    &:hover { 
+        border-bottom: none;
+        
+        span { border-bottom: 1px solid rgba($default-link, 0.8); }
+    }
+}

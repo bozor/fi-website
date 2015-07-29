@@ -1,2 +1,26 @@
 @import "values";
 
+.logo { 
+    display: block; float: left; width: 161px; height: 46px; background: url(../images/logo.svg); background-size: 161px 46px; text-indent: -9999px; border: none;
+    
+    &:hover { border: none; opacity: 0.5; }
+}
+
+.nav-top,
+.sub-nav > ul { list-style: none; padding: 0; }
+
+.nav-top {
+    float: right; margin-top: 10px;
+    
+    & > li { position: relative; float: left; margin-left: 25px; }
+    
+    .has-sub-nav { 
+        color: $default-text; font-size: $font-size-3; text-transform: lowercase; border-bottom: none;
+        
+        &:hover { color: $default-text-medium; }
+    }
+}
+
+.sub-nav { 
+    position: absolute; display: none;
+}
