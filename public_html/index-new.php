@@ -84,7 +84,7 @@
 				<div class="twitter"></div>
 				<p><a href="https://twitter.com/FianiumLtd" target="_blank" class="twitter-follow right">Follow us on twitter</a></p>
 			</div>
-		</section>
+		</section> 
 
         <section class="home-applications">
             <div class="header">
@@ -113,12 +113,12 @@
 	
 	<?php include("includes/footer.php") ?>
     
-	<script type="text/javascript" src="js/jquery.tweet.min.js"></script>
+	<!--<script type="text/javascript" src="js/jquery.tweet.min.js"></script>-->
 	<script type="text/javascript">
 		$(function(){
 			Ui.twitter();
 			
-			Ui.setActiveNav($('#nav-home'));
+			//Ui.setActiveNav($('#nav-home'));
 		});
 	</script>
 </body>

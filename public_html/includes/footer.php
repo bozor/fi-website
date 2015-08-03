@@ -1,6 +1,7 @@
 <footer class="layout-footer">
     <div class="layout-content">
         <section class="nav-footer-top">
+            <span class="footer-logo">Fianium</span>
             <ol class="nav-footer">
                 <li>
                     <span class="section-title">Company</span>
@@ -55,7 +56,7 @@
 </footer>
 	
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3.12&sensor=false"></script>
-<script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="js/libs.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 
 <!--<script type="text/javascript">

@@ -1,5 +1,7 @@
 @import "values";
 
+.footer-logo { display: block; float: left; width: 33px; height: 41px; background-size: 33px 41px; background: url(../images/logo-small-grey.svg) no-repeat; text-indent: -9999px; margin-right: 40px; }
+
 .nav-footer { 
     list-style: none; padding: 0; margin: 0;
     

@@ -556,7 +556,7 @@ html {
 .layout-footer {
   clear: both;
   background: url(../images/special-bg-light-grey.jpg) center top no-repeat;
-  padding: 30px 0;
+  padding: 45px 0;
 }
 
 /* fonts */
@@ -608,6 +608,17 @@ html {
 
 /* fonts */
 /* colours */
+.footer-logo {
+  display: block;
+  float: left;
+  width: 33px;
+  height: 41px;
+  background-size: 33px 41px;
+  background: url(../images/logo-small-grey.svg) no-repeat;
+  text-indent: -9999px;
+  margin-right: 40px;
+}
+
 .nav-footer {
   list-style: none;
   padding: 0;
@@ -819,6 +830,7 @@ html {
   max-width: 72.5em;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 .latest-tweets::after {
   clear: both;
@@ -827,6 +839,14 @@ html {
 }
 .latest-tweets h2 {
   color: #fff;
+  margin-bottom: 17px;
+}
+.latest-tweets > p {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  margin-bottom: 0;
 }
 .latest-tweets .twitter-follow {
   font-weight: bold;
@@ -835,6 +855,31 @@ html {
   letter-spacing: -0.05em;
 }
 .latest-tweets .twitter-follow:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.twitter .tweet_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.twitter .tweet_list li {
+  position: relative;
+  color: #fff;
+  font-size: 1.1em;
+}
+.twitter .tweet_list .tweet_text {
+  display: block;
+  margin-bottom: 10px;
+}
+.twitter .tweet_list .tweet_time {
+  opacity: 0.6;
+}
+.twitter .tweet_list a {
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+.twitter .tweet_list a:hover {
   border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 }
 

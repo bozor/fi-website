@@ -1,5 +1,8 @@
 module.exports = function(grunt) {
 
+    // load all grunt tasks matching the `grunt-*` pattern
+    require('load-grunt-tasks')(grunt);
+    
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         
@@ -13,16 +16,42 @@ module.exports = function(grunt) {
             }
         },
         
+        concat: {
+            options: {
+                separator: ';'
+            },
+            dev: {
+                src: ['src/js/jquery.tweet.min.js', 'src/js/common.js'],
+                dest: 'public_html/js/common.js'
+            }
+        },
+        
+        bower_concat: {
+            js: {
+                dest: 'public_html/js/libs.js',
+            }
+        },
+        
         watch: {
-            /*markup: {
+            markup: {
                 files: ['public_html/**'],
                 options: {
-                    livereload: true
+                    livereload: 35729
                 }
-            },*/
+            },
+            js: {
+                files: 'src/js/**',
+                tasks: 'concat:dev',
+                options: {
+                    livereload: 35729
+                }
+            },
             stylesheets: {
                 files: 'src/scss/**',
-                tasks: 'sass:dev'
+                tasks: 'sass:dev',
+                options: {
+                    livereload: 35729
+                }
             }
         },
                      
@@ -41,21 +70,15 @@ module.exports = function(grunt) {
         },
             
         clean: {
-            stylesheets: 'public_html/css/*.css'
+            stylesheets: 'public_html/css/*.css',
+            js: 'public_html/js/*.js'
         }
 
     });
     
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-php');
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    
     grunt.registerTask('stylesheets:dev', ['clean:stylesheets', 'sass:dev']);
-
-    grunt.registerTask('dev', ['stylesheets:dev']);
+    grunt.registerTask('js:dev', ['clean:js', 'concat:dev', 'bower_concat']);
+    grunt.registerTask('dev', ['stylesheets:dev', 'js:dev']);
 
     grunt.registerTask('default', ['dev', 'php', 'watch']);
 };
