@@ -80,5 +80,6 @@ module.exports = function(grunt) {
     grunt.registerTask('js:dev', ['clean:js', 'concat:dev', 'bower_concat']);
     grunt.registerTask('dev', ['stylesheets:dev', 'js:dev']);
 
+    grunt.registerTask('publish', ['dev']);
     grunt.registerTask('default', ['dev', 'php', 'watch']);
 };
