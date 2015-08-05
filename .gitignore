@@ -16,3 +16,7 @@ bower_components/*
 # or any temp files
 .tmp
 tmp/*
+
+# or twitter files
+public_html/twitter/*.json
+.public_html/twitter/*.json

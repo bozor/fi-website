@@ -1,5 +1,17 @@
 @import "bourbon";
 
+/* tweaking the grid */
+$grid-columns: 24;
+$gutter: modular-scale(1, 2em, $golden);
+$max-width: em(1160);
+$visual-grid: false;
+
+/* breakpoints */
+$sm: new-breakpoint(max-width 31em);
+$md: new-breakpoint(min-width 31em);
+$lg: new-breakpoint(min-width 65em);
+$xl: new-breakpoint(min-width 80em);
+
 /* fonts */
 $modular-scale-ratio: $golden;
 $modular-scale-base: 1.2em;
@@ -14,7 +26,8 @@ $font-size-7: 4.2em;
 
 /* colours */
 $default-text: #414042;
-$default-text-medium: #9d9d9d;
+$default-text-dark: #313032;
+$default-text-medium: #919092;
 
 $default-link: #e9292f;
 

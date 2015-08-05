@@ -13,15 +13,15 @@
 .splash-bottom { background: url(../images/special-bg-red.jpg) center top; margin-bottom: 20px; padding: 25px 0; }
 
 .splash-inner { 
-    @include outer-container;
+    @include outer-container; 
     
     a { 
-        position: relative; display: block; color: #fff;
+        position: relative; display: block; color: #fff; padding: 0 15px;
         
         .splash-title { display: block; font-family: 'dincond-boldbold'; font-size: $font-size-7; letter-spacing: -0.05em; margin-bottom: -5px; }
         .splash-subtitle { opacity: 0.5; font-family: 'dincond-regularregular'; font-size: $font-size-6; letter-spacing: -0.05em; }
         .splash-cta { 
-            position: absolute; right: 0; bottom: 2px; border-bottom: 1px solid rgba(#fff, 0.25); font-weight: bold; letter-spacing: -0.05em;
+            position: absolute; right: 20px; bottom: 2px; border-bottom: 1px solid rgba(#fff, 0.25); font-weight: bold; letter-spacing: -0.05em;
             
             &:hover { border-bottom: 1px solid rgba(#fff, 0.8); }
         }
@@ -29,13 +29,13 @@
 }
 
 .home-intro {
-    @include outer-container; border-bottom: 1px solid $light-border; margin-bottom: 20px;
+    @include outer-container; border-bottom: 1px solid $light-border; margin-bottom: 20px; padding: 0 20px;
     
     > p { @include span-columns(12); }
 }
 
 .home-text-sections { 
-    @include outer-container; border-bottom: 1px solid $light-border; margin-bottom: 20px;
+    @include outer-container; border-bottom: 1px solid $light-border; margin-bottom: 20px; padding: 0 20px;
     
     & > .home-text-section {
         @include outer-container; padding-bottom: 20px;
@@ -46,18 +46,22 @@
 }
 
 .home-products { 
-    @include outer-container; margin-bottom: 20px;
+    @include outer-container; margin-bottom: 20px; padding: 0 20px;
     
-    & > .home-product { @include span-columns(8); }
+    & > .home-product { 
+        @include span-columns(8); 
+        
+        img { margin-bottom: 10px; }
+    }
 }
 
 .layout-twitter { background: url(../images/special-bg-blue.jpg) center top; padding: 25px 0; }
 
 .latest-tweets {
-    @include outer-container; position: relative;
+    @include outer-container; position: relative; padding: 0 20px;
     
     h2 { color: #fff; margin-bottom: 17px; }
-    & > p { position: absolute; right: 0; bottom: 0; overflow: hidden; margin-bottom: 0; }
+    & > p { position: absolute; right: 20px; bottom: 0; overflow: hidden; margin-bottom: 0; }
     
     .twitter-follow { 
         font-weight: bold; color: #fff; border-bottom: 1px solid rgba(#fff, 0.25); letter-spacing: -0.05em;
@@ -84,7 +88,11 @@
 }
 
 .home-applications { 
-    @include outer-container; padding-top: 20px;
+    @include outer-container; padding: 20px 20px 0;
     
-    & > .home-application { @include span-columns(6); }
+    & > .home-application { 
+        @include span-columns(6); 
+        
+        img { margin-bottom: 10px; }
+    }
 }

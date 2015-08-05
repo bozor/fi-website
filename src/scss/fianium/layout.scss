@@ -3,15 +3,9 @@
 
 @import "values";
 
-/* tweaking the grid */
-$grid-columns: 24;
-$gutter: modular-scale(1, 2em, $golden);
-$max-width: em(1160);
-$visual-grid: false;
-
 .layout-top { padding-top: 30px; }
 
-.layout-content { @include outer-container; }
+.layout-content { @include outer-container; padding: 0 20px; }
 
 .layout-header { }
 .layout-footer { clear: both; background: url(../images/special-bg-light-grey.jpg) center top no-repeat; padding: 45px 0; }

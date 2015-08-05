@@ -1,7 +1,11 @@
 @import "values";
 
-html { background: url(../images/top-red-bar.png) center top no-repeat #fff; font-family: 'Source Sans Pro', sans-serif; -webkit-text-size-adjust: 100%; }
+html { background: url(../images/top-red-bar.png) center top no-repeat #fff; font-family: 'Source Sans Pro', sans-serif; -webkit-text-size-adjust: 100%; box-sizing: border-box; }
 body { margin: 0; }
+
+*,
+*:before,
+*:after { box-sizing: inherit; }
 
 div,
 a,
@@ -16,6 +20,8 @@ a {
 .left { float: left; }
 .right { float: right; }
 .clear { clear: both; overflow: hidden; line-height: 1px; font-size: 1px; }
+
+img { max-width: 100%; }
 
 /* typography */
 
@@ -43,7 +49,7 @@ a {
 
 h1 { font-family: 'dincond-boldbold'; margin-top: 0; font-size: $font-size-7; }
 h2 { font-family: 'dincond-regularregular'; margin-top: 0; font-size: $font-size-6; color: $default-text; text-transform: uppercase; letter-spacing: -0.05em; }
-h3 { font-family: 'dincond-regularregular'; margin-top: 0; font-size: $font-size-5; color: $default-text; }
+h3 { font-family: 'dincond-regularregular'; margin-top: 0; font-size: $font-size-5; color: $default-text; margin-bottom: 15px; }
 h4 { }
 h5 { }
 

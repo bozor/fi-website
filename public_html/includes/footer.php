@@ -59,6 +59,12 @@
 <script type="text/javascript" src="js/libs.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 
+	<script type="text/javascript">
+		$(function(){
+			Menu.init();
+		});
+	</script>
+
 <!--<script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-1723892-1']);

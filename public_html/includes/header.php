@@ -3,7 +3,7 @@
         <div class="header-overlay">
             <a href="index.htm" class="logo">Fianium</a>
 
-            <span id="mobile-menu">
+            <span class="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>

@@ -17,7 +17,7 @@
         
 		<section class="layout-splash">
 			<div class="splash-inner">
-				<img src="images/splash/home.jpg" />
+				<img src="images/splash/home.jpg" class="splash-image" />
 			</div>
 			<div class="splash-bottom">
 				<div class="splash-inner">
@@ -62,16 +62,19 @@
                 <a href="" class="btn-text">See our full product range in more detail &rsaquo;</a>
             </div>
             <div class="home-product">
+                <img src="images/home/home-whitelase.jpg" />
                 <h3>WhiteLase SuperContinuum Lasers</h3>
                 <p>Qui sirloin pork loin sint. Pastrami kielbasa jowl tenderloin, proident porchetta biltong filet mignon ipsum irure ex minim ham.</p>
                 <a href="" class="btn-chevron"><span>Discover WhiteLase</span></a>
             </div>
             <div class="home-product">
+                <img src="images/home/home-femtopower.jpg" />
                 <h3>FemtoPower Femtosecond Lasers</h3>
                 <p>Adipisicing proident in, ham hock ea ut et sunt. Swine ball tip cow prosciutto eiusmod cupidatat chuck ipsum fugiat bresaola spare ribs quis, pork loin in fatback.</p>
                 <a href="" class="btn-chevron"><span>Discover FemtoPower</span></a>
             </div>
             <div class="home-product">
+                <img src="images/home/home-hylase.jpg" />
                 <h3>HYLASE High-Energy Lasers</h3>
                 <p>Nostrud laboris duis ullamco meatball sint. T-bone exercitation tri-tip ribeye, cupidatat ham hock aute meatball.</p>
                 <a href="" class="btn-chevron"><span>Discover HYLASE</span></a>
@@ -92,18 +95,22 @@
                 <a href="" class="btn-text">Read about applications for our fiber lasers &rsaquo;</a>
             </div>
             <div class="home-application">
+                <img src="images/home/home-spec.jpg" />
                 <h3>Spectrocopy</h3>
                 <p>Do eiusmod incididunt corned beef, venison porchetta magna kevin pariatur turkey nulla ball tip exercitation salami.</p>
             </div>
             <div class="home-application">
+                <img src="images/home/home-micro.jpg" />
                 <h3>Micro-machining</h3>
                 <p>Swine short ribs sirloin, lorem et minim cillum shoulder flank.</p>
             </div>
             <div class="home-application">
+                <img src="images/home/home-bio.jpg" />
                 <h3>Bio-imaging</h3>
                 <p>Ribeye swine tri-tip pig consequat magna anim. Non pork chop ball tip cow sed eu commodo do shankle tempor ground round.</p>
             </div>
             <div class="home-application">
+                <img src="images/home/home-nano.jpg" />
                 <h3>Nanophotonics</h3>
                 <p>Turducken et incididunt, bresaola laborum porchetta sed filet mignon pork dolore ad cupidatat in aute pork loin.</p>
             </div>
