@@ -1,0 +1,28 @@
+{
+  "name": "fianium-website",
+  "version": "0.1.0",
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "grunt": "*",
+    "grunt-bower-concat": "^0.5.0",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-php": "*",
+    "node-bourbon": "*",
+    "node-neat": "*"
+  },
+  "dependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-concat": "^0.3.0",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-php": "^1.5.0",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-watch": "^0.6.0",
+    "node-bourbon": "*",
+    "node-neat": "^1.7.2"
+  }
+}
