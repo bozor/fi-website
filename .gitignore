@@ -1,3 +1,4 @@
+*.scssc
 .DS_Store
 
 # We don't want to check in packages
@@ -17,6 +18,14 @@ bower_components/*
 .tmp
 tmp/*
 
-# or twitter files
-public_html/twitter/*.json
-.public_html/twitter/*.json
+# or anything in the build folder
+.public_html
+public_html/*
+.public_html/
+
+# or any compiled css/map files
+*.css
+*.map
+
+# or the server info json file
+server.json
