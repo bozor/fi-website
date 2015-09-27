@@ -11,9 +11,9 @@ div,
 a,
 span { -webkit-tap-highlight-color: rgba(0,0,0,0); }
 
-a { 
-    color: $default-link; text-decoration: none; border-bottom: 1px solid rgba($default-link, 0.25); @include transition(150ms all); 
-    
+a {
+    color: $default-link; text-decoration: none; border-bottom: 1px solid rgba($default-link, 0.25); @include transition(150ms all);
+
     &:hover { border-bottom: 1px solid rgba($default-link, 0.8); }
 }
 
@@ -47,25 +47,37 @@ img { max-width: 100%; }
     font-style: normal;
 }
 
-h1 { font-family: 'dincond-boldbold'; margin-top: 0; font-size: $font-size-7; }
-h2 { font-family: 'dincond-regularregular'; margin-top: 0; font-size: $font-size-6; color: $default-text; text-transform: uppercase; letter-spacing: -0.05em; }
-h3 { font-family: 'dincond-regularregular'; margin-top: 0; font-size: $font-size-5; color: $default-text; margin-bottom: 15px; }
+h1 { font-family: 'dincond-boldbold'; margin: 0 0 25px; font-size: $font-size-7; letter-spacing: -0.05em; }
+h2 {
+    font-family: 'dincond-regularregular'; margin: 0 0 25px; font-size: $font-size-6; color: $default-text; text-transform: uppercase; letter-spacing: -0.05em;
+
+    &.alt { text-transform: none; }
+
+    .highlight { color: $default-link; }
+}
+h3 { font-family: 'dincond-regularregular'; margin: 0 0 25px; font-size: $font-size-5; color: $default-text; margin-bottom: 15px; }
 h4 { }
 h5 { }
 
-p { color: $default-text; margin-top: 0; line-height: 1.5em; }
+p {
+    color: $default-text; margin: 0 0 20px; font-size: $font-size-3; line-height: 1.7em;
+
+    strong { font-weight: 600; }
+}
 p.medium { font-size: $font-size-3; }
-p.large { font-size: $font-size-4;  }
+p.large { font-size: $font-size-4; line-height: 1.45em; }
+
+ul.text { color: $default-text; margin-top: 0; margin-bottom: 25px; line-height: 1.5em; }
 
 .btn-text { font-weight: bold; letter-spacing: -0.05em; }
-.btn-chevron { 
+.btn-chevron {
     background: url(../images/chevron.svg) no-repeat; font-weight: bold; background-size: 20px 20px; padding-left: 25px; border-bottom: none; letter-spacing: -0.05em;
-    
+
     span { border-bottom: 1px solid rgba($default-link, 0.25); }
-    
-    &:hover { 
+
+    &:hover {
         border-bottom: none;
-        
+
         span { border-bottom: 1px solid rgba($default-link, 0.8); }
     }
 }
