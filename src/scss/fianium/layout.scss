@@ -3,9 +3,20 @@
 
 @import "values";
 
-.layout-top { padding-top: 30px; }
+.layout-top {
+    padding: 30px 0 20px; border-bottom: 1px solid $light-border; box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 
-.layout-content { @include outer-container; padding: 0 20px; }
+    .layout-content { }
+}
+
+.layout-main { padding-top: 5px; }
+
+.layout-content {
+    @include outer-container; padding: 0 20px;
+
+    .layout-content-inner { @include span-columns(16); }
+    .layout-content-image { @include span-columns(8); }
+}
 
 .layout-header { }
-.layout-footer { clear: both; background: url(../images/special-bg-light-grey.jpg) center top no-repeat; padding: 45px 0; }
+.layout-footer { clear: both; background: url('../images/special-bg-light-grey.jpg') center top no-repeat; border-top: 1px solid $light-border; padding: 45px 0; }

@@ -47,16 +47,16 @@ img { max-width: 100%; }
     font-style: normal;
 }
 
-h1 { font-family: 'dincond-boldbold'; margin: 0 0 25px; font-size: $font-size-7; letter-spacing: -0.05em; }
+h1 { font-family: 'dincond-boldbold'; margin: 0 0 5px; font-size: $font-size-7; color: $default-text-dark; letter-spacing: -0.05em; }
 h2 {
-    font-family: 'dincond-regularregular'; margin: 0 0 25px; font-size: $font-size-6; color: $default-text; text-transform: uppercase; letter-spacing: -0.05em;
+    font-family: 'dincond-regularregular'; margin: 0 0 20px; font-size: $font-size-6; color: $default-text-dark; text-transform: uppercase; letter-spacing: -0.05em;
 
     &.alt { text-transform: none; }
 
     .highlight { color: $default-link; }
 }
-h3 { font-family: 'dincond-regularregular'; margin: 0 0 25px; font-size: $font-size-5; color: $default-text; margin-bottom: 15px; }
-h4 { }
+h3 { font-family: 'dincond-regularregular'; margin: 0 0 15px; font-size: $font-size-5; color: $default-text; }
+h4 { color: $default-text; font-size: $font-size-4; font-weight: 600; margin: 0 0 20px; }
 h5 { }
 
 p {
@@ -67,7 +67,7 @@ p {
 p.medium { font-size: $font-size-3; }
 p.large { font-size: $font-size-4; line-height: 1.45em; }
 
-ul.text { color: $default-text; margin-top: 0; margin-bottom: 25px; line-height: 1.5em; }
+ul.text { color: $default-text; margin-top: 0; margin-bottom: 25px; line-height: 1.7em; font-size: $font-size-3; }
 
 .btn-text { font-weight: bold; letter-spacing: -0.05em; }
 .btn-chevron {
